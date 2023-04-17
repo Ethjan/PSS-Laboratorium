@@ -4,11 +4,11 @@
 
 double ARX::symuluj(double we) {
     double wy;
-    s_u.push_back(we);
-    s_u.erase(s_u.begin());
-    wy = std::inner_product(begin(s_B), end(s_B), begin(s_u), 0.0) + std::inner_product(begin(s_A), end(s_A), begin(s_y), 0.0);
-    s_y.push_back(wy);
-    s_y.erase(s_y.begin());
+    s_u.push_front(we);
+    s_u.pop_back();
+    wy = std::inner_product(begin(s_B), end(s_B), begin(s_u), 0.0) - std::inner_product(begin(s_A) , end(s_A), begin(s_y), 0.0);
+    s_y.push_front(wy);
+    s_y.pop_back();
     return wy;
 }
 
