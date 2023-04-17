@@ -1,7 +1,6 @@
 #pragma once
 #include "SISO.h"
 #include <vector>
-#include <algorithm>
 #include <deque>
 
 class ARX : public SISO {
@@ -14,7 +13,7 @@ public:
     //Kontruktor
     ARX(std::vector<double> A = { -0.5 }, std::vector<double> B = { 1 }, int nk = 1, double var = 0.0) {
         // Przypisanie wartoœci od u¿ytkownika do sk³adowych klasy
-        s_A = A;
+        s_A = A; // Wielomian nie zawiera 1 na pocz¹tku
         s_B = B;
         s_k = nk;
         s_var = var;
@@ -22,7 +21,7 @@ public:
         for (int i = 0; i < s_k; i++) {
             s_B.insert(s_B.begin() + i, 0);
         }
-        // Inicjalizacja wektora wartoœci wejsciowych i wyjsciowych
+        // Inicjalizacja kolejki wartoœci wejsciowych i wyjsciowych
         s_y = std::deque<double>(s_A.size(), 0);
         s_u = std::deque<double>(s_B.size(), 0);
     };
