@@ -2,6 +2,7 @@
 #include "SISO.h"
 #include <vector>
 #include <deque>
+#include <iostream>
 
 class ARX : public SISO {
 private:
@@ -15,7 +16,13 @@ public:
         // Przypisanie wartoœci od u¿ytkownika do sk³adowych klasy
         s_A = A; // Wielomian nie zawiera 1 na pocz¹tku
         s_B = B;
-        s_k = nk;
+        if (nk < 0) {
+            std::cout << "Wprowadzono ujemna wartosc opoznienia - Ustawiono opoznienie na wartosc 1" << std::endl;
+            s_k = 1;
+        }
+        else {
+            s_k = nk;
+        }
         s_var = var;
         // Dopisanie odpowiedniej iloœci zer do wielomianu B zwi¹zanych z opoznieniem
         for (int i = 0; i < s_k; i++) {

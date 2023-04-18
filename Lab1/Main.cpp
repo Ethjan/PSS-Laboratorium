@@ -4,19 +4,18 @@
 #include "ARX.h"
 
 int main() {
-    ARX obiekt({ -0.5 }, { 1 }, 1, 0);
+    ARX obiekt({ -0.5 }, { 1 }, -1, 0);
     obiekt.WypiszParametry();
     double wyjscie;
     std::ofstream outfile("output.txt");
-    for (int k = 0; k < 25; k++) {
-        if (k == 0){
+    for (int i = 0; i < 25; i++) {
+        if (i == 0) {
             wyjscie = obiekt.symuluj(0.0);
         }
         else {
             wyjscie = obiekt.symuluj(1.0);
         }
-        //std::cout << "Wyjscie: " << wyjscie << std::endl;
-        obiekt.WypiszWeWy();
+        std::cout << "Wyjscie: " << wyjscie << std::endl;
         if (outfile.is_open()) {
             outfile << wyjscie << std::endl;
         }
