@@ -23,8 +23,8 @@ void ARX::WypiszParametry() {
     }
     std::cout << std::endl;
     std::cout << "Wielomian B: ";
-    for (int i = 0; i < s_B.size(); i++) {
-        std::cout << s_B.at(i) << ' ';
+    for (int j = 0; j < s_B.size(); j++) {
+        std::cout << s_B.at(j) << ' ';
     }
     std::cout << std::endl;
     std::cout << "Opoznienie: " << s_k << std::endl;
@@ -38,8 +38,8 @@ void ARX::WypiszWeWy() {
         std::cout << s_u.at(i) << ' ';
     }
     std::cout << "Wyjscie: ";
-    for (int i = 0; i < s_y.size(); i++) {
-        std::cout << s_y.at(i) << ' ';
+    for (int j = 0; j < s_y.size(); j++) {
+        std::cout << s_y.at(j) << ' ';
     }
     std::cout << std::endl;
 }
