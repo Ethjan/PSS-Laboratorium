@@ -8,6 +8,8 @@ int main() {
     obiekt.WypiszParametry();
     double wyjscie;
     std::ofstream outfile("output.txt");
+    
+    
     for (int i = 0; i < 25; i++) {
         if (i == 0) {
             wyjscie = obiekt.symuluj(0.0);
