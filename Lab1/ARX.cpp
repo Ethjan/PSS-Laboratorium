@@ -8,7 +8,6 @@ double ARX::symuluj(double we) {
     // Aktualizacja wartosci wejciowych (ustawienie nowej wartoœci na pocz¹tku kolejni i usuniêcie ostatniego elementu kolejki)
     s_u.push_front(we);
     s_u.pop_back();
-
     // Obliczenie wartosci wyjscia
     if (s_var == 0) {
         wy = std::inner_product(begin(s_B), end(s_B), begin(s_u), 0.0) - std::inner_product(begin(s_A), end(s_A), begin(s_y), 0.0);
