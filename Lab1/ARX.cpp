@@ -1,7 +1,14 @@
 #include "ARX.h"
-#include<iostream>
-#include<numeric>
-#include<random>
+#include <iostream>
+#include <fstream>
+#include <numeric>
+#include <random>
+#include "json.hpp"
+#include <boost/program_options.hpp>
+
+namespace po = boost::program_options;
+
+using json = nlohmann::json;
 
 double ARX::symuluj(double we) {
     double wy;
@@ -41,6 +48,36 @@ std::ostream& ARX::WypiszParametry(std::ostream& strumien){
     return strumien;
 }
 
-void ARX::ZapisKonfiguracji() {
+void ARX::ZapisKonfiguracji(std::string Nazwa) {
+    //std::ifstream PlikOdczyt("Konf.json");
+    //json KonfiguracjaZapis = json::parse(PlikOdczyt);
 
+    //std::cout << KonfiguracjaZapis.at("ARX") << std::endl;
+    //std::cout << KonfiguracjaZapis.at("A") << KonfiguracjaZapis.at("B") << KonfiguracjaZapis.at("k") << KonfiguracjaZapis.at("War") << std::endl;
+
+    //json Zapis;
+    //json KonfiguracjaZapis;
+    //json cos = { "orangutan","cos"};
+    //json cos = {
+    //        {"A", s_A},
+     //       {"B", s_B},
+    //        {"k", s_k},
+    //        {"War", s_var}
+    //};
+    //Zapis = json::array({ {Nazwa,cos} });
+    //KonfiguracjaZapis.update(Zapis);
+    //std::cout << "Konfiguracja: " << Zapis << std::endl;
+    //std::ofstream PlikZapis("Konf.json");
+    //PlikZapis << std::setw(4) << Zapis << std::endl;
+
+
+}
+
+void ARX::OdczytKonfiguracji(std::string Nazwa) {
+    std::ifstream PlikOdczyt("Konf.json");
+    json KonfiguracjaOdczyt = json::parse(PlikOdczyt);
+    KonfiguracjaOdczyt.at("A").get_to(s_A);
+    KonfiguracjaOdczyt.at("B").get_to(s_B);
+    KonfiguracjaOdczyt.at("k").get_to(s_k);
+    KonfiguracjaOdczyt.at("War").get_to(s_var);
 }

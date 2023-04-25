@@ -4,6 +4,7 @@
 #include <deque>
 #include <iostream>
 
+/// Klasa ARX
 class ARX : public SISO {
 private:
     unsigned int s_k;
@@ -26,6 +27,8 @@ public:
 
     std::ostream& WypiszParametry(std::ostream& strumien);
 
-    void ZapisKonfiguracji();
+    void ZapisKonfiguracji(std::string Nazwa);
+
+    void OdczytKonfiguracji(std::string Nazwa);
 
 };
