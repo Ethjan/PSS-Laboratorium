@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\wojte\Documents\BibliotekiC++\boost_1_82_0\boost_1_82_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\wojte\Documents\BibliotekiC++\json-develop\single_include\nlohmann</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,7 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ARX.h" />
-    <ClInclude Include="json.hpp" />
     <ClInclude Include="SISO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

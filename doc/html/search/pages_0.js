@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lab1_0',['Lab1',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['lista_20elementów_20do_20wycofania_0',['Lista elementów do wycofania',['../deprecated.html',1,'']]]
 ];

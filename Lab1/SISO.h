@@ -1,6 +1,8 @@
 #pragma once
 
-///Klasa SISo
+///
+/// COSIAKKAKSKD
+/// 
 class SISO {
 public:
     virtual double symuluj(double we) = 0;
