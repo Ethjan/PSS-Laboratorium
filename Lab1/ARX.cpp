@@ -1,4 +1,4 @@
-#include "ARX.h"
+﻿#include "ARX.h"
 #include <iostream>
 #include <fstream>
 #include <numeric>
@@ -8,33 +8,33 @@
 using json = nlohmann::json;
 
 /**
- * Funkcja dodaj�ca dwie liczby ca�kowite.
- * @param we pierwsza liczba
- * @return wynik dodawania
+ * @param we wejście obiektu
+ * @return obliczone wyjście obiektu
  */
 double ARX::symuluj(double we) {
     double wy;
-    // Aktualizacja wartosci wejciowych (ustawienie nowej warto�ci na pocz�tku kolejni i usuni�cie ostatniego elementu kolejki)
+    // Aktualizacja wartosci wejściowych (ustawienie nowej wartości na początku kolejki i usunięcie ostatniego elementu kolejki)
     s_u.push_front(we);
     s_u.pop_back();
-    // Obliczenie wartosci wyjscia
-    if (s_var == 0) {
+    // Obliczenie wartości wyjścia
+    if (s_var == 0.0) {
         wy = std::inner_product(begin(s_B), end(s_B), begin(s_u), 0.0) - std::inner_product(begin(s_A), end(s_A), begin(s_y), 0.0);
     }
     else {
         std::default_random_engine generator(std::random_device{}());
         std::normal_distribution<double> dystrybucja(0.0, sqrt(s_var));
         double zaklocenie = dystrybucja(generator);
-        std::cout << zaklocenie << std::endl;
         wy = std::inner_product(begin(s_B), end(s_B), begin(s_u), 0.0) - std::inner_product(begin(s_A) , end(s_A), begin(s_y), 0.0) + zaklocenie;
     }
-    // Aktualizacja wartosci wyjsciowych (ustawienie nowej warto�ci na pocz�tku kolejni i usuni�cie ostatniego elementu kolejki)
+    // Aktualizacja wartości wyjsciowych (ustawienie nowej wartości na początku kolejni i usunięcie ostatniego elementu kolejki)
     s_y.push_front(wy);
     s_y.pop_back();
     return wy;
 }
+/**
+ * Wypisananie Parametrów (Wielomian A, Wielomian B, Opóźnienie, Wariancja szumu) na dowolnym strumieniu zadanym przez użytkownika
+ */
 std::ostream& ARX::WypiszParametry(std::ostream& strumien){
-    // Wypisananie Parametr�w (Wielomian A, Wielomian B, Op�nienie, Wariancja szumu)
     strumien << "Wielomian A: ";
     for (int i = 0; i < s_A.size(); i++) {
         strumien << s_A.at(i) << ' ';
@@ -50,21 +50,21 @@ std::ostream& ARX::WypiszParametry(std::ostream& strumien){
     return strumien;
 }
 
+/**
+ * Zapis konfiguracji do pliku (Wielomian A, Wielomian B, Opóźnienie, Wariancja szumu)
+ */
 void ARX::ZapisKonfiguracji() {
     std::ifstream PlikOdczyt("Konf.json");
     json KonfiguracjaZapis = json::parse(PlikOdczyt);
-    std::cout << KonfiguracjaZapis << std::endl;
     json temp;
+    // Sprawdzenie czy podany klucz istnieje. Jeżeli tak, to nadpisz. Jeżeli nie, to utwórz
     if (KonfiguracjaZapis.contains("ARX_A")){
         KonfiguracjaZapis.at("ARX_A") = s_A;
     }
     else {
         temp.clear();
         temp["ARX_A"]= s_A;
-        //std::cout << temp << std::endl;
-        //std::cout << KonfiguracjaZapis << std::endl;
         KonfiguracjaZapis.update(temp,true);
-        //std::cout << KonfiguracjaZapis << std::endl;
     }
     if (KonfiguracjaZapis.contains("ARX_B")) {
         KonfiguracjaZapis.at("ARX_B") = s_B;
@@ -81,7 +81,6 @@ void ARX::ZapisKonfiguracji() {
         temp.clear();
         temp["ARX_k"] = s_k;
         KonfiguracjaZapis.update(temp, true);
-        //KonfiguracjaZapis["ARX_k"] = s_k;
     }
     if (KonfiguracjaZapis.contains("ARX_War")) {
         KonfiguracjaZapis.at("ARX_War") = s_var;
@@ -90,13 +89,16 @@ void ARX::ZapisKonfiguracji() {
         temp.clear();
         temp["ARX_War"] = s_var;
         KonfiguracjaZapis.update(temp, true);
-        //KonfiguracjaZapis["ARX_War"] = s_var;
     }
-    std::cout << "Konfiguracja: " << KonfiguracjaZapis << std::endl;
     std::ofstream PlikZapis("Konf.json");
     PlikZapis << std::setw(4) << KonfiguracjaZapis << std::endl;
+    PlikZapis.close();
+    PlikOdczyt.close();
 }
 
+/**
+ * Odczyt konfiguracji z pliku (Wielomian A, Wielomian B, Opóźnienie, Wariancja szumu)
+ */
 void ARX::OdczytKonfiguracji() {
     std::ifstream PlikOdczyt("Konf.json");
     json KonfiguracjaOdczyt = json::parse(PlikOdczyt);
@@ -104,4 +106,5 @@ void ARX::OdczytKonfiguracji() {
     KonfiguracjaOdczyt.at("ARX_B").get_to(s_B);
     KonfiguracjaOdczyt.at("ARX_k").get_to(s_k);
     KonfiguracjaOdczyt.at("ARX_War").get_to(s_var);
+    PlikOdczyt.close();
 }

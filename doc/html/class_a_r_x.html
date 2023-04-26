@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSS-Laboratorium: Dokumentacja klasy ARX</title>
+<title>Programowanie system贸w sterowania: Dokumentacja klasy ARX</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,9 +22,8 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">PSS-Laboratorium<span id="projectnumber">&#160;Test</span>
+   <div id="projectname">Programowanie system贸w sterowania
    </div>
-   <div id="projectbrief">Programowanie system贸w sterowania</div>
   </td>
  </tr>
  </tbody>
@@ -73,12 +72,13 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_a_r_x-members.html">Lista wszystkich sk艂adowych</a>  </div>
   <div class="headertitle"><div class="title">Dokumentacja klasy ARX</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Klasa reprezentuj筩a punkt w uk砤dzie wsp蟪rz阣nych.  
+<p>Klasa modeluj膮ca obiekt typu ARX.  
  <a href="class_a_r_x.html#details">Wi臋cej...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_a_r_x_8h_source.html">ARX.h</a>&gt;</code></p>
@@ -88,33 +88,59 @@ Diagram dziedziczenia dla ARX</div>
  <div class="center">
   <img src="class_a_r_x.png" usemap="#ARX_map" alt=""/>
   <map id="ARX_map" name="ARX_map">
-<area href="class_s_i_s_o.html" title="COSIAKKAKSKD." alt="SISO" shape="rect" coords="0,0,41,24"/>
+<area href="class_s_i_s_o.html" title="Klasa modelujaca obiekt typu SISO." alt="SISO" shape="rect" coords="0,0,41,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:a2c1cab60f76360e2b6d0e6243671753e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#a2c1cab60f76360e2b6d0e6243671753e">ARX</a> (std::vector&lt; double &gt; A={ -0.5 }, std::vector&lt; double &gt; B={ 1 }, unsigned int nk=1, double var=0.0)</td></tr>
-<tr class="memdesc:a2c1cab60f76360e2b6d0e6243671753e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kontruktor.  <br /></td></tr>
+<tr class="memdesc:a2c1cab60f76360e2b6d0e6243671753e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <br /></td></tr>
 <tr class="separator:a2c1cab60f76360e2b6d0e6243671753e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d22a57d8eace550755a6b423b20f959"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#a2d22a57d8eace550755a6b423b20f959">symuluj</a> (double we) override</td></tr>
-<tr class="memdesc:a2d22a57d8eace550755a6b423b20f959"><td class="mdescLeft">&#160;</td><td class="mdescRight">ORANGUTAn.  <br /></td></tr>
+<tr class="memdesc:a2d22a57d8eace550755a6b423b20f959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda symulujaca obiekt. Jako argument przyjmuje wejscie obiektu oraz zwraca obliczone wyjscie obiektu.  <br /></td></tr>
 <tr class="separator:a2d22a57d8eace550755a6b423b20f959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebdd83a56a535bd2121fceb6ce3c7eb7"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#aebdd83a56a535bd2121fceb6ce3c7eb7">WypiszParametry</a> (std::ostream &amp;strumien)</td></tr>
-<tr class="memdesc:aebdd83a56a535bd2121fceb6ce3c7eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ORANGUTAn.  <br /></td></tr>
+<tr class="memdesc:aebdd83a56a535bd2121fceb6ce3c7eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda wypisujaca parametry modelu. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia.  <br /></td></tr>
 <tr class="separator:aebdd83a56a535bd2121fceb6ce3c7eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8cdcfe00d12d8f78b6a0f204b8668e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#ae8cdcfe00d12d8f78b6a0f204b8668e5">ZapisKonfiguracji</a> ()</td></tr>
+<tr class="memdesc:ae8cdcfe00d12d8f78b6a0f204b8668e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zapisujaca parametry modelu w pliku. Jest bezargumentowa oraz nic nie zwraca.  <br /></td></tr>
 <tr class="separator:ae8cdcfe00d12d8f78b6a0f204b8668e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fcd5c691dfcc55725527c65cbe48071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#a4fcd5c691dfcc55725527c65cbe48071">OdczytKonfiguracji</a> ()</td></tr>
+<tr class="memdesc:a4fcd5c691dfcc55725527c65cbe48071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odczytyjaca parametry modelu z pliku. Jest bezargumentowa oraz nic nie zwraca.  <br /></td></tr>
 <tr class="separator:a4fcd5c691dfcc55725527c65cbe48071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_s_i_s_o"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_i_s_o')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_s_i_s_o.html">SISO</a></td></tr>
 <tr class="memitem:a8bc62cb5ac471a89869a298b4ebad7b9 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">symuluj</a> (double we)=0</td></tr>
+<tr class="memdesc:a8bc62cb5ac471a89869a298b4ebad7b9 inherit pub_methods_class_s_i_s_o"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda symulujaca obiekt. Metoda czysto wirtualna.  <br /></td></tr>
 <tr class="separator:a8bc62cb5ac471a89869a298b4ebad7b9 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a> ()</td></tr>
+<tr class="memdesc:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wirtualny destruktor.  <br /></td></tr>
 <tr class="separator:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a7d9974f04433a984d5562c7c403e102a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a">s_k</a></td></tr>
+<tr class="memdesc:a7d9974f04433a984d5562c7c403e102a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowuj膮ca op贸藕nienie obiektu.  <br /></td></tr>
+<tr class="separator:a7d9974f04433a984d5562c7c403e102a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288b08e79f73af4d009b43fcabed4702"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#a288b08e79f73af4d009b43fcabed4702">s_var</a></td></tr>
+<tr class="memdesc:a288b08e79f73af4d009b43fcabed4702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowuj膮ca wariancj臋 zak艂贸cenia.  <br /></td></tr>
+<tr class="separator:a288b08e79f73af4d009b43fcabed4702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1bf7f3389e34e9e5286bd24a84214b1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1">s_A</a></td></tr>
+<tr class="memdesc:af1bf7f3389e34e9e5286bd24a84214b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienne przechowuj膮ce wsp贸艂czynniki wielomianu A.  <br /></td></tr>
+<tr class="separator:af1bf7f3389e34e9e5286bd24a84214b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524befe2bbbcbc2461fa811b6d1e0611"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611">s_B</a></td></tr>
+<tr class="memdesc:a524befe2bbbcbc2461fa811b6d1e0611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienne przechowuj膮ce wsp贸艂czynniki wielomianu B.  <br /></td></tr>
+<tr class="separator:a524befe2bbbcbc2461fa811b6d1e0611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61ad06d76ce7b19daa55ee0f59639e7"><td class="memItemLeft" align="right" valign="top">std::deque&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7">s_u</a></td></tr>
+<tr class="memdesc:af61ad06d76ce7b19daa55ee0f59639e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowuj膮ca poprzednie warto艣ci wej艣cia obiektu.  <br /></td></tr>
+<tr class="separator:af61ad06d76ce7b19daa55ee0f59639e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb3515374c95f4b7ed58c9676d89639"><td class="memItemLeft" align="right" valign="top">std::deque&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639">s_y</a></td></tr>
+<tr class="memdesc:aaeb3515374c95f4b7ed58c9676d89639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowuj膮ca poprzednie warto艣ci wyj艣cia obiektu.  <br /></td></tr>
+<tr class="separator:aaeb3515374c95f4b7ed58c9676d89639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczeg贸艂owy</h2>
-<div class="textblock"><p>Klasa reprezentuj筩a punkt w uk砤dzie wsp蟪rz阣nych. </p>
+<div class="textblock"><p>Klasa modeluj膮ca obiekt typu ARX. </p>
+<p>Umo偶liwia obliczenie wyj艣cia na podstawie zadanych parametr贸w modelu oraz zadanego wyj艣cia. </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a2c1cab60f76360e2b6d0e6243671753e" name="a2c1cab60f76360e2b6d0e6243671753e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c1cab60f76360e2b6d0e6243671753e">&#9670;&#160;</a></span>ARX()</h2>
@@ -162,7 +188,8 @@ Metody publiczne</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Kontruktor. </p>
+<p>Konstruktor. </p>
+<p>W przypadku nie zdefiniowania przez u偶ytkownika parametr贸w obiektu, przyjmowany jest przykladowy model. </p>
 
 </div>
 </div>
@@ -181,6 +208,9 @@ Metody publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Metoda odczytyjaca parametry modelu z pliku. Jest bezargumentowa oraz nic nie zwraca. </p>
+<p>Odczyt konfiguracji z pliku (Wielomian A, Wielomian B, Op贸藕nienie, Wariancja szumu) </p>
 
 </div>
 </div>
@@ -208,15 +238,14 @@ Metody publiczne</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>ORANGUTAn. </p>
-<p>Funkcja dodaj筩a dwie liczby ca砶owite.</p>
+<p>Metoda symulujaca obiekt. Jako argument przyjmuje wejscie obiektu oraz zwraca obliczone wyjscie obiektu. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">we</td><td>pierwsza liczba </td></tr>
+    <tr><td class="paramname">we</td><td>wej艣cie obiektu </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Zwraca</dt><dd>wynik dodawania </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>obliczone wyj艣cie obiektu </dd></dl>
 
 <p>Implementuje <a class="el" href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">SISO</a>.</p>
 
@@ -238,7 +267,8 @@ Metody publiczne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ORANGUTAn. </p>
+<p>Metoda wypisujaca parametry modelu. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia. </p>
+<p>Wypisananie Parametr贸w (Wielomian A, Wielomian B, Op贸藕nienie, Wariancja szumu) na dowolnym strumieniu zadanym przez u偶ytkownika. </p>
 
 </div>
 </div>
@@ -256,6 +286,154 @@ Metody publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Metoda zapisujaca parametry modelu w pliku. Jest bezargumentowa oraz nic nie zwraca. </p>
+<p>Zapis konfiguracji do pliku (Wielomian A, Wielomian B, Op贸藕nienie, Wariancja szumu) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybut贸w sk艂adowych</h2>
+<a id="af1bf7f3389e34e9e5286bd24a84214b1" name="af1bf7f3389e34e9e5286bd24a84214b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1bf7f3389e34e9e5286bd24a84214b1">&#9670;&#160;</a></span>s_A</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; ARX::s_A</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienne przechowuj膮ce wsp贸艂czynniki wielomianu A. </p>
+
+</div>
+</div>
+<a id="a524befe2bbbcbc2461fa811b6d1e0611" name="a524befe2bbbcbc2461fa811b6d1e0611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a524befe2bbbcbc2461fa811b6d1e0611">&#9670;&#160;</a></span>s_B</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; ARX::s_B</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienne przechowuj膮ce wsp贸艂czynniki wielomianu B. </p>
+
+</div>
+</div>
+<a id="a7d9974f04433a984d5562c7c403e102a" name="a7d9974f04433a984d5562c7c403e102a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9974f04433a984d5562c7c403e102a">&#9670;&#160;</a></span>s_k</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ARX::s_k</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowuj膮ca op贸藕nienie obiektu. </p>
+
+</div>
+</div>
+<a id="af61ad06d76ce7b19daa55ee0f59639e7" name="af61ad06d76ce7b19daa55ee0f59639e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61ad06d76ce7b19daa55ee0f59639e7">&#9670;&#160;</a></span>s_u</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::deque&lt;double&gt; ARX::s_u</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowuj膮ca poprzednie warto艣ci wej艣cia obiektu. </p>
+
+</div>
+</div>
+<a id="a288b08e79f73af4d009b43fcabed4702" name="a288b08e79f73af4d009b43fcabed4702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288b08e79f73af4d009b43fcabed4702">&#9670;&#160;</a></span>s_var</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ARX::s_var</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowuj膮ca wariancj臋 zak艂贸cenia. </p>
+
+</div>
+</div>
+<a id="aaeb3515374c95f4b7ed58c9676d89639" name="aaeb3515374c95f4b7ed58c9676d89639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb3515374c95f4b7ed58c9676d89639">&#9670;&#160;</a></span>s_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::deque&lt;double&gt; ARX::s_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowuj膮ca poprzednie warto艣ci wyj艣cia obiektu. </p>
 
 </div>
 </div>

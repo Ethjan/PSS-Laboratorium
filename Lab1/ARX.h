@@ -4,42 +4,46 @@
 #include <deque>
 #include <iostream>
 
-/**
- * Klasa reprezentuj筩a punkt w uk砤dzie wsp蟪rz阣nych.
+
+/** @class ARX
+ * Klasa modeluj膮ca obiekt typu %ARX. Umo偶liwia obliczenie wyj艣cia na podstawie zadanych parametr贸w modelu oraz zadanego wyj艣cia.
  */
 
 class ARX : public SISO {
 private:
+    /// Zmienna przechowuj膮ca op贸藕nienie obiektu
     unsigned int s_k;
+    /// Zmienna przechowuj膮ca wariancj臋 zak艂贸cenia
     double s_var;
-    std::vector<double> s_A, s_B;
-    std::deque<double> s_u, s_y;
-public:    
-
-    ///Kontruktor
+    /// Zmienne przechowuj膮ce wsp贸艂czynniki wielomianu A
+    std::vector<double> s_A;
+    /// Zmienne przechowuj膮ce wsp贸艂czynniki wielomianu B
+    std::vector<double> s_B;
+    /// Zmienna przechowuj膮ca poprzednie warto艣ci wej艣cia obiektu
+    std::deque<double> s_u;
+    /// Zmienna przechowuj膮ca poprzednie warto艣ci  wyj艣cia obiektu
+    std::deque<double> s_y;
+public:   
+    /**  Konstruktor
+    * @brief W przypadku nie zdefiniowania przez u偶ytkownika parametr贸w obiektu, przyjmowany jest przykladowy model.
+    */
     ARX(std::vector<double> A = { -0.5 }, std::vector<double> B = { 1 }, unsigned int nk = 1, double var = 0.0) :
         s_A(A), s_B(B), s_k(nk), s_var(var), s_y(std::deque<double>(1, 0)), s_u(std::deque<double>(1, 0)) {
-        // Dopisanie odpowiedniej ilo渃i zer do wielomianu B zwi箊anych z opoznieniem
-        for (int i = 0; i < s_k; i++) {
+        // Dopisanie odpowiedniej ilo艣ci zer do wielomianu B zwi膮zanych z opoznieniem
+        for (unsigned int i = 0; i < s_k; i++) {
             s_B.insert(s_B.begin() + i, 0);
         }
         s_y = (std::deque<double>(s_A.size(), 0));
         s_u = (std::deque<double>(s_B.size(), 0));
     };
-    
 
-    /**
-    * ORANGUTAn
-    */
+    ///Metoda symulujaca obiekt. Jako argument przyjmuje wejscie obiektu oraz zwraca obliczone wyjscie obiektu.
     double symuluj(double we) override;
-
-    /**
-    * ORANGUTAn
-    */
+    ///Metoda wypisujaca parametry modelu. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia.
     std::ostream& WypiszParametry(std::ostream& strumien);
-   
+    ///Metoda zapisujaca parametry modelu w pliku. Jest bezargumentowa oraz nic nie zwraca.
     void ZapisKonfiguracji();
-
+    ///Metoda odczytyjaca parametry modelu z pliku. Jest bezargumentowa oraz nic nie zwraca.
     void OdczytKonfiguracji();
 
 };

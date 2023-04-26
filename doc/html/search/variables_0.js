@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['_5f_5fpad0_5f_5f_0',['__pad0__',['../classdetail_1_1iter__impl.html#ae146c1c7a0b8a46e353b1bbe181f7743',1,'detail::iter_impl::__pad0__()'],['../classdetail_1_1serializer.html#aae0aca92f2f35e72aac9c7d22e01312b',1,'detail::serializer::__pad0__()']]],
-  ['_5f_5fpad1_5f_5f_1',['__pad1__',['../classdetail_1_1iter__impl.html#a392b5af6ea3449fe31ab7aafa5db4774',1,'detail::iter_impl']]],
-  ['_5f_5fpad3_5f_5f_2',['__pad3__',['../classbasic__json.html#a7dd56e6dab5328365a3c9b9d15f98e1b',1,'basic_json']]],
-  ['_5f_5fpad4_5f_5f_3',['__pad4__',['../classbasic__json.html#a27054edf6738852b42e0218fe4337e1c',1,'basic_json']]]
+  ['s_5fa_0',['s_A',['../class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1',1,'ARX']]],
+  ['s_5fb_1',['s_B',['../class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611',1,'ARX']]],
+  ['s_5fk_2',['s_k',['../class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a',1,'ARX']]],
+  ['s_5fu_3',['s_u',['../class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7',1,'ARX']]],
+  ['s_5fvar_4',['s_var',['../class_a_r_x.html#a288b08e79f73af4d009b43fcabed4702',1,'ARX']]],
+  ['s_5fy_5',['s_y',['../class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639',1,'ARX']]]
 ];

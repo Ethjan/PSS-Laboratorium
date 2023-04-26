@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PSS-Laboratorium: Plik 藕r贸d艂owy ARX.h</title>
+<title>Programowanie system贸w sterowania: Plik 藕r贸d艂owy Lab1/ARX.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,9 +22,8 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">PSS-Laboratorium<span id="projectnumber">&#160;Test</span>
+   <div id="projectname">Programowanie system贸w sterowania
    </div>
-   <div id="projectbrief">Programowanie system贸w sterowania</div>
   </td>
  </tr>
  </tbody>
@@ -48,7 +47,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -70,6 +68,11 @@ $(function() {
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_21d3850f9f3538f348e1a90fdd8b50aa.html">Lab1</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">ARX.h</div></div>
 </div><!--header-->
@@ -80,42 +83,46 @@ $(function() {
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;deque&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_a_r_x.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_a_r_x.html">ARX</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_s_i_s_o.html">SISO</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s_k;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">double</span> s_var;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    std::vector&lt;double&gt; s_A, s_B;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    std::deque&lt;double&gt; s_u, s_y;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:    </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_a_r_x.html#a2c1cab60f76360e2b6d0e6243671753e">   20</a></span>    <a class="code hl_function" href="class_a_r_x.html#a2c1cab60f76360e2b6d0e6243671753e">ARX</a>(std::vector&lt;double&gt; A = { -0.5 }, std::vector&lt;double&gt; B = { 1 }, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nk = 1, <span class="keywordtype">double</span> var = 0.0) :</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        s_A(A), s_B(B), s_k(nk), s_var(var), s_y(std::deque&lt;double&gt;(1, 0)), s_u(std::deque&lt;double&gt;(1, 0)) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// Dopisanie odpowiedniej ilo渃i zer do wielomianu B zwi箊anych z opoznieniem</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s_k; i++) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            s_B.insert(s_B.begin() + i, 0);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        s_y = (std::deque&lt;double&gt;(s_A.size(), 0));</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        s_u = (std::deque&lt;double&gt;(s_B.size(), 0));</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_a_r_x.html#a2d22a57d8eace550755a6b423b20f959">symuluj</a>(<span class="keywordtype">double</span> we) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::ostream&amp; <a class="code hl_function" href="class_a_r_x.html#aebdd83a56a535bd2121fceb6ce3c7eb7">WypiszParametry</a>(std::ostream&amp; strumien);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>   </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_r_x.html#ae8cdcfe00d12d8f78b6a0f204b8668e5">ZapisKonfiguracji</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_r_x.html#a4fcd5c691dfcc55725527c65cbe48071">OdczytKonfiguracji</a>();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_a_r_x.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_a_r_x.html">ARX</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_s_i_s_o.html">SISO</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a">   15</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a">s_k</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_a_r_x.html#a288b08e79f73af4d009b43fcabed4702">   17</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_a_r_x.html#a288b08e79f73af4d009b43fcabed4702">s_var</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1">   19</a></span>    std::vector&lt;double&gt; <a class="code hl_variable" href="class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1">s_A</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611">   21</a></span>    std::vector&lt;double&gt; <a class="code hl_variable" href="class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611">s_B</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7">   23</a></span>    std::deque&lt;double&gt; <a class="code hl_variable" href="class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7">s_u</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639">   25</a></span>    std::deque&lt;double&gt; <a class="code hl_variable" href="class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639">s_y</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:   </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_a_r_x.html#a2c1cab60f76360e2b6d0e6243671753e">   30</a></span>    <a class="code hl_function" href="class_a_r_x.html#a2c1cab60f76360e2b6d0e6243671753e">ARX</a>(std::vector&lt;double&gt; A = { -0.5 }, std::vector&lt;double&gt; B = { 1 }, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nk = 1, <span class="keywordtype">double</span> var = 0.0) :</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_variable" href="class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1">s_A</a>(A), <a class="code hl_variable" href="class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611">s_B</a>(B), <a class="code hl_variable" href="class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a">s_k</a>(nk), <a class="code hl_variable" href="class_a_r_x.html#a288b08e79f73af4d009b43fcabed4702">s_var</a>(var), <a class="code hl_variable" href="class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639">s_y</a>(std::deque&lt;double&gt;(1, 0)), <a class="code hl_variable" href="class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7">s_u</a>(std::deque&lt;double&gt;(1, 0)) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">// Dopisanie odpowiedniej ilo艣ci zer do wielomianu B zwi膮zanych z opoznieniem</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a">s_k</a>; i++) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611">s_B</a>.insert(<a class="code hl_variable" href="class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611">s_B</a>.begin() + i, 0);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639">s_y</a> = (std::deque&lt;double&gt;(<a class="code hl_variable" href="class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1">s_A</a>.size(), 0));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7">s_u</a> = (std::deque&lt;double&gt;(<a class="code hl_variable" href="class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611">s_B</a>.size(), 0));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_a_r_x.html#a2d22a57d8eace550755a6b423b20f959">symuluj</a>(<span class="keywordtype">double</span> we) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::ostream&amp; <a class="code hl_function" href="class_a_r_x.html#aebdd83a56a535bd2121fceb6ce3c7eb7">WypiszParametry</a>(std::ostream&amp; strumien);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_r_x.html#ae8cdcfe00d12d8f78b6a0f204b8668e5">ZapisKonfiguracji</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_r_x.html#a4fcd5c691dfcc55725527c65cbe48071">OdczytKonfiguracji</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
 <div class="ttc" id="a_s_i_s_o_8h_html"><div class="ttname"><a href="_s_i_s_o_8h.html">SISO.h</a></div></div>
-<div class="ttc" id="aclass_a_r_x_html"><div class="ttname"><a href="class_a_r_x.html">ARX</a></div><div class="ttdoc">Klasa reprezentuj筩a punkt w uk砤dzie wsp蟪rz阣nych.</div><div class="ttdef"><b>Definition:</b> ARX.h:11</div></div>
-<div class="ttc" id="aclass_a_r_x_html_a2c1cab60f76360e2b6d0e6243671753e"><div class="ttname"><a href="class_a_r_x.html#a2c1cab60f76360e2b6d0e6243671753e">ARX::ARX</a></div><div class="ttdeci">ARX(std::vector&lt; double &gt; A={ -0.5 }, std::vector&lt; double &gt; B={ 1 }, unsigned int nk=1, double var=0.0)</div><div class="ttdoc">Kontruktor.</div><div class="ttdef"><b>Definition:</b> ARX.h:20</div></div>
-<div class="ttc" id="aclass_a_r_x_html_a2d22a57d8eace550755a6b423b20f959"><div class="ttname"><a href="class_a_r_x.html#a2d22a57d8eace550755a6b423b20f959">ARX::symuluj</a></div><div class="ttdeci">double symuluj(double we) override</div><div class="ttdoc">ORANGUTAn.</div><div class="ttdef"><b>Definition:</b> ARX.cpp:15</div></div>
-<div class="ttc" id="aclass_a_r_x_html_a4fcd5c691dfcc55725527c65cbe48071"><div class="ttname"><a href="class_a_r_x.html#a4fcd5c691dfcc55725527c65cbe48071">ARX::OdczytKonfiguracji</a></div><div class="ttdeci">void OdczytKonfiguracji()</div><div class="ttdef"><b>Definition:</b> ARX.cpp:100</div></div>
-<div class="ttc" id="aclass_a_r_x_html_ae8cdcfe00d12d8f78b6a0f204b8668e5"><div class="ttname"><a href="class_a_r_x.html#ae8cdcfe00d12d8f78b6a0f204b8668e5">ARX::ZapisKonfiguracji</a></div><div class="ttdeci">void ZapisKonfiguracji()</div><div class="ttdef"><b>Definition:</b> ARX.cpp:53</div></div>
-<div class="ttc" id="aclass_a_r_x_html_aebdd83a56a535bd2121fceb6ce3c7eb7"><div class="ttname"><a href="class_a_r_x.html#aebdd83a56a535bd2121fceb6ce3c7eb7">ARX::WypiszParametry</a></div><div class="ttdeci">std::ostream &amp; WypiszParametry(std::ostream &amp;strumien)</div><div class="ttdoc">ORANGUTAn.</div><div class="ttdef"><b>Definition:</b> ARX.cpp:36</div></div>
-<div class="ttc" id="aclass_s_i_s_o_html"><div class="ttname"><a href="class_s_i_s_o.html">SISO</a></div><div class="ttdoc">COSIAKKAKSKD.</div><div class="ttdef"><b>Definition:</b> SISO.h:6</div></div>
+<div class="ttc" id="aclass_a_r_x_html"><div class="ttname"><a href="class_a_r_x.html">ARX</a></div><div class="ttdoc">Klasa modeluj膮ca obiekt typu ARX.</div><div class="ttdef"><b>Definition:</b> ARX.h:12</div></div>
+<div class="ttc" id="aclass_a_r_x_html_a288b08e79f73af4d009b43fcabed4702"><div class="ttname"><a href="class_a_r_x.html#a288b08e79f73af4d009b43fcabed4702">ARX::s_var</a></div><div class="ttdeci">double s_var</div><div class="ttdoc">Zmienna przechowuj膮ca wariancj臋 zak艂贸cenia.</div><div class="ttdef"><b>Definition:</b> ARX.h:17</div></div>
+<div class="ttc" id="aclass_a_r_x_html_a2c1cab60f76360e2b6d0e6243671753e"><div class="ttname"><a href="class_a_r_x.html#a2c1cab60f76360e2b6d0e6243671753e">ARX::ARX</a></div><div class="ttdeci">ARX(std::vector&lt; double &gt; A={ -0.5 }, std::vector&lt; double &gt; B={ 1 }, unsigned int nk=1, double var=0.0)</div><div class="ttdoc">Konstruktor.</div><div class="ttdef"><b>Definition:</b> ARX.h:30</div></div>
+<div class="ttc" id="aclass_a_r_x_html_a2d22a57d8eace550755a6b423b20f959"><div class="ttname"><a href="class_a_r_x.html#a2d22a57d8eace550755a6b423b20f959">ARX::symuluj</a></div><div class="ttdeci">double symuluj(double we) override</div><div class="ttdoc">Metoda symulujaca obiekt. Jako argument przyjmuje wejscie obiektu oraz zwraca obliczone wyjscie obiek...</div><div class="ttdef"><b>Definition:</b> ARX.cpp:14</div></div>
+<div class="ttc" id="aclass_a_r_x_html_a4fcd5c691dfcc55725527c65cbe48071"><div class="ttname"><a href="class_a_r_x.html#a4fcd5c691dfcc55725527c65cbe48071">ARX::OdczytKonfiguracji</a></div><div class="ttdeci">void OdczytKonfiguracji()</div><div class="ttdoc">Metoda odczytyjaca parametry modelu z pliku. Jest bezargumentowa oraz nic nie zwraca.</div><div class="ttdef"><b>Definition:</b> ARX.cpp:102</div></div>
+<div class="ttc" id="aclass_a_r_x_html_a524befe2bbbcbc2461fa811b6d1e0611"><div class="ttname"><a href="class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611">ARX::s_B</a></div><div class="ttdeci">std::vector&lt; double &gt; s_B</div><div class="ttdoc">Zmienne przechowuj膮ce wsp贸艂czynniki wielomianu B.</div><div class="ttdef"><b>Definition:</b> ARX.h:21</div></div>
+<div class="ttc" id="aclass_a_r_x_html_a7d9974f04433a984d5562c7c403e102a"><div class="ttname"><a href="class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a">ARX::s_k</a></div><div class="ttdeci">unsigned int s_k</div><div class="ttdoc">Zmienna przechowuj膮ca op贸藕nienie obiektu.</div><div class="ttdef"><b>Definition:</b> ARX.h:15</div></div>
+<div class="ttc" id="aclass_a_r_x_html_aaeb3515374c95f4b7ed58c9676d89639"><div class="ttname"><a href="class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639">ARX::s_y</a></div><div class="ttdeci">std::deque&lt; double &gt; s_y</div><div class="ttdoc">Zmienna przechowuj膮ca poprzednie warto艣ci wyj艣cia obiektu.</div><div class="ttdef"><b>Definition:</b> ARX.h:25</div></div>
+<div class="ttc" id="aclass_a_r_x_html_ae8cdcfe00d12d8f78b6a0f204b8668e5"><div class="ttname"><a href="class_a_r_x.html#ae8cdcfe00d12d8f78b6a0f204b8668e5">ARX::ZapisKonfiguracji</a></div><div class="ttdeci">void ZapisKonfiguracji()</div><div class="ttdoc">Metoda zapisujaca parametry modelu w pliku. Jest bezargumentowa oraz nic nie zwraca.</div><div class="ttdef"><b>Definition:</b> ARX.cpp:56</div></div>
+<div class="ttc" id="aclass_a_r_x_html_aebdd83a56a535bd2121fceb6ce3c7eb7"><div class="ttname"><a href="class_a_r_x.html#aebdd83a56a535bd2121fceb6ce3c7eb7">ARX::WypiszParametry</a></div><div class="ttdeci">std::ostream &amp; WypiszParametry(std::ostream &amp;strumien)</div><div class="ttdoc">Metoda wypisujaca parametry modelu. Jako argument przyjmuje referencje do strumienia oraz zwraca refe...</div><div class="ttdef"><b>Definition:</b> ARX.cpp:37</div></div>
+<div class="ttc" id="aclass_a_r_x_html_af1bf7f3389e34e9e5286bd24a84214b1"><div class="ttname"><a href="class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1">ARX::s_A</a></div><div class="ttdeci">std::vector&lt; double &gt; s_A</div><div class="ttdoc">Zmienne przechowuj膮ce wsp贸艂czynniki wielomianu A.</div><div class="ttdef"><b>Definition:</b> ARX.h:19</div></div>
+<div class="ttc" id="aclass_a_r_x_html_af61ad06d76ce7b19daa55ee0f59639e7"><div class="ttname"><a href="class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7">ARX::s_u</a></div><div class="ttdeci">std::deque&lt; double &gt; s_u</div><div class="ttdoc">Zmienna przechowuj膮ca poprzednie warto艣ci wej艣cia obiektu.</div><div class="ttdef"><b>Definition:</b> ARX.h:23</div></div>
+<div class="ttc" id="aclass_s_i_s_o_html"><div class="ttname"><a href="class_s_i_s_o.html">SISO</a></div><div class="ttdoc">Klasa modelujaca obiekt typu SISO.</div><div class="ttdef"><b>Definition:</b> SISO.h:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
