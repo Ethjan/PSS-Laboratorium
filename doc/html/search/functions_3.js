@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['symuluj_0',['symuluj',['../class_a_r_x.html#a2d22a57d8eace550755a6b423b20f959',1,'ARX::symuluj()'],['../class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9',1,'SISO::symuluj()']]]
+  ['pd_0',['PD',['../class_p_d.html#a76158e291c5e0361f8d9400bdf13b626',1,'PD']]],
+  ['pi_1',['PI',['../class_p_i.html#a38de44e7478d4c68e15c79b48154ac97',1,'PI']]]
 ];

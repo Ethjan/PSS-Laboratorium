@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Programowanie systemów sterowania: Plik źródłowy Lab1/SISO.h</title>
+<title>Programowanie systemów sterowania: Lista składowych</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,26 +68,22 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_21d3850f9f3538f348e1a90fdd8b50aa.html">Lab1</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">SISO.h</div></div>
+  <div class="headertitle"><div class="title">PID Lista składowych</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_s_i_s_o_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_s_i_s_o.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_s_i_s_o.html">SISO</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">    9</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">symuluj</a>(<span class="keywordtype">double</span> we) = 0;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">   11</a></span>    <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code hl_function" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a>(){};</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>};</div>
-<div class="ttc" id="aclass_s_i_s_o_html"><div class="ttname"><a href="class_s_i_s_o.html">SISO</a></div><div class="ttdoc">Klasa modelujaca obiekt typu SISO.</div><div class="ttdef"><b>Definition:</b> SISO.h:6</div></div>
-<div class="ttc" id="aclass_s_i_s_o_html_a3f6b0b7cda79493b941553e5d5780167"><div class="ttname"><a href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">SISO::~SISO</a></div><div class="ttdeci">virtual ~SISO()</div><div class="ttdoc">Wirtualny destruktor.</div><div class="ttdef"><b>Definition:</b> SISO.h:11</div></div>
-<div class="ttc" id="aclass_s_i_s_o_html_a8bc62cb5ac471a89869a298b4ebad7b9"><div class="ttname"><a href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">SISO::symuluj</a></div><div class="ttdeci">virtual double symuluj(double we)=0</div><div class="ttdoc">Metoda symulujaca obiekt. Metoda czysto wirtualna.</div></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>To jest kompletna lista składowych dla <a class="el" href="class_p_i_d.html">PID</a>, uwzględniająca wszystkie dziedziczone składowe.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_p_d.html#a76158e291c5e0361f8d9400bdf13b626">PD</a>(double Kp, double Td)</td><td class="entry"><a class="el" href="class_p_d.html">PD</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_p_i.html#a38de44e7478d4c68e15c79b48154ac97">PI</a>(double Kp, double Ti)</td><td class="entry"><a class="el" href="class_p_i.html">PI</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_p_i_d.html#a3bc93cc31ea3c284973cd27bfb30b5aa">s_Kp</a></td><td class="entry"><a class="el" href="class_p_i_d.html">PID</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_p_i_d.html#ac17ec44b454123bdf09677b41126bcd2">s_Td</a></td><td class="entry"><a class="el" href="class_p_i_d.html">PID</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_p_i_d.html#a050fbc644c0ce3f889dba44808b7149e">s_Ti</a></td><td class="entry"><a class="el" href="class_p_i_d.html">PID</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_p_i_d.html#a7648126256b4e235105cf978dbd8f894">symuluj</a>(double we) override</td><td class="entry"><a class="el" href="class_p_i_d.html">PID</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a>()</td><td class="entry"><a class="el" href="class_s_i_s_o.html">SISO</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6

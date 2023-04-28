@@ -1,9 +1,7 @@
-﻿#include "ARX.h"
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
-#include <numeric>
-#include <random>
 #include "json.hpp"
+#include "ARX.h"
 
 using json = nlohmann::json;
 
@@ -21,10 +19,7 @@ double ARX::symuluj(double we) {
         wy = std::inner_product(begin(s_B), end(s_B), begin(s_u), 0.0) - std::inner_product(begin(s_A), end(s_A), begin(s_y), 0.0);
     }
     else {
-        std::default_random_engine generator(std::random_device{}());
-        std::normal_distribution<double> dystrybucja(0.0, sqrt(s_var));
-        double zaklocenie = dystrybucja(generator);
-        wy = std::inner_product(begin(s_B), end(s_B), begin(s_u), 0.0) - std::inner_product(begin(s_A) , end(s_A), begin(s_y), 0.0) + zaklocenie;
+        wy = std::inner_product(begin(s_B), end(s_B), begin(s_u), 0.0) - std::inner_product(begin(s_A) , end(s_A), begin(s_y), 0.0) + s_dystrybucja(s_generator);
     }
     // Aktualizacja wartości wyjsciowych (ustawienie nowej wartości na początku kolejni i usunięcie ostatniego elementu kolejki)
     s_y.push_front(wy);
@@ -33,6 +28,8 @@ double ARX::symuluj(double we) {
 }
 /**
  * Wypisananie Parametrów (Wielomian A, Wielomian B, Opóźnienie, Wariancja szumu) na dowolnym strumieniu zadanym przez użytkownika
+ * @param strumien referencja do strumienia
+ * @return referencja do strumienia
  */
 std::ostream& ARX::WypiszParametry(std::ostream& strumien){
     strumien << "Wielomian A: ";
@@ -52,10 +49,11 @@ std::ostream& ARX::WypiszParametry(std::ostream& strumien){
 
 /**
  * Zapis konfiguracji do pliku (Wielomian A, Wielomian B, Opóźnienie, Wariancja szumu)
+ * @param strumien referencja do strumienia
+ * @return referencja do strumienia
  */
-void ARX::ZapisKonfiguracji() {
-    std::ifstream PlikOdczyt("Konf.json");
-    json KonfiguracjaZapis = json::parse(PlikOdczyt);
+std::fstream& ARX::ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& strumienZapis) {
+    json KonfiguracjaZapis = json::parse(strumienOdczyt);
     json temp;
     // Sprawdzenie czy podany klucz istnieje. Jeżeli tak, to nadpisz. Jeżeli nie, to utwórz
     if (KonfiguracjaZapis.contains("ARX_A")){
@@ -64,6 +62,7 @@ void ARX::ZapisKonfiguracji() {
     else {
         temp.clear();
         temp["ARX_A"]= s_A;
+        std::cout << temp << std::endl;
         KonfiguracjaZapis.update(temp,true);
     }
     if (KonfiguracjaZapis.contains("ARX_B")) {
@@ -90,21 +89,21 @@ void ARX::ZapisKonfiguracji() {
         temp["ARX_War"] = s_var;
         KonfiguracjaZapis.update(temp, true);
     }
-    std::ofstream PlikZapis("Konf.json");
-    PlikZapis << std::setw(4) << KonfiguracjaZapis << std::endl;
-    PlikZapis.close();
-    PlikOdczyt.close();
+    //std::fstream cos("Konf.json", std::ios::out);
+    strumienZapis << std::setw(4) << KonfiguracjaZapis << std::endl;
+    return strumienZapis;
 }
 
 /**
  * Odczyt konfiguracji z pliku (Wielomian A, Wielomian B, Opóźnienie, Wariancja szumu)
+ * @param strumien referencja do strumienia
+ * @return referencja do strumienia
  */
-void ARX::OdczytKonfiguracji() {
-    std::ifstream PlikOdczyt("Konf.json");
-    json KonfiguracjaOdczyt = json::parse(PlikOdczyt);
+std::fstream& ARX::OdczytKonfiguracji(std::fstream& strumien) {
+    json KonfiguracjaOdczyt = json::parse(strumien);
     KonfiguracjaOdczyt.at("ARX_A").get_to(s_A);
     KonfiguracjaOdczyt.at("ARX_B").get_to(s_B);
     KonfiguracjaOdczyt.at("ARX_k").get_to(s_k);
     KonfiguracjaOdczyt.at("ARX_War").get_to(s_var);
-    PlikOdczyt.close();
+    return strumien;
 }

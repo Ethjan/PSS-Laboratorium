@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['s_5fa_0',['s_A',['../class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1',1,'ARX']]],
-  ['s_5fb_1',['s_B',['../class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611',1,'ARX']]],
-  ['s_5fk_2',['s_k',['../class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a',1,'ARX']]],
-  ['s_5fu_3',['s_u',['../class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7',1,'ARX']]],
-  ['s_5fvar_4',['s_var',['../class_a_r_x.html#a288b08e79f73af4d009b43fcabed4702',1,'ARX']]],
-  ['s_5fy_5',['s_y',['../class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639',1,'ARX']]],
-  ['siso_6',['SISO',['../class_s_i_s_o.html',1,'']]],
-  ['siso_2eh_7',['SISO.h',['../_s_i_s_o_8h.html',1,'']]],
-  ['symuluj_8',['symuluj',['../class_a_r_x.html#a2d22a57d8eace550755a6b423b20f959',1,'ARX::symuluj()'],['../class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9',1,'SISO::symuluj()']]]
+  ['pd_0',['PD',['../class_p_d.html',1,'PD'],['../class_p_d.html#a76158e291c5e0361f8d9400bdf13b626',1,'PD::PD()']]],
+  ['pd_2ecpp_1',['PD.cpp',['../_p_d_8cpp.html',1,'']]],
+  ['pd_2eh_2',['PD.h',['../_p_d_8h.html',1,'']]],
+  ['pi_3',['PI',['../class_p_i.html',1,'PI'],['../class_p_i.html#a38de44e7478d4c68e15c79b48154ac97',1,'PI::PI()']]],
+  ['pi_2ecpp_4',['PI.cpp',['../_p_i_8cpp.html',1,'']]],
+  ['pi_2eh_5',['PI.h',['../_p_i_8h.html',1,'']]],
+  ['pid_6',['PID',['../class_p_i_d.html',1,'']]],
+  ['pid_2ecpp_7',['PID.cpp',['../_p_i_d_8cpp.html',1,'']]],
+  ['pid_2eh_8',['PID.h',['../_p_i_d_8h.html',1,'']]]
 ];

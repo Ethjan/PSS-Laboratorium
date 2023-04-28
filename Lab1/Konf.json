@@ -1,19 +1,21 @@
 {
-    "ARMAX_A": 0,
-    "ARMAX_B": 0,
-    "ARMAX_War": 0,
-    "ARMAX_k": 0,
     "ARX_A": [
-        -0.5
+        -0.8,
+        0.4
     ],
     "ARX_B": [
         0.0,
         1.0
     ],
-    "ARX_War": 0.01,
+    "ARX_War": 0.0,
     "ARX_k": 1,
-    "PID_A": 0,
-    "PID_B": 0,
-    "PID_War": 0,
-    "PID_k": 0
+    "PID_A": [
+        -0.5
+    ],
+    "PID_B": [
+        0.0,
+        1.0
+    ],
+    "PID_War": 0.0,
+    "PID_k": 1
 }

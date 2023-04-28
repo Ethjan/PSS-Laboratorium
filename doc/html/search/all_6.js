@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zapiskonfiguracji_0',['ZapisKonfiguracji',['../class_a_r_x.html#ae8cdcfe00d12d8f78b6a0f204b8668e5',1,'ARX']]]
+  ['wypiszparametry_0',['WypiszParametry',['../class_a_r_x.html#aebdd83a56a535bd2121fceb6ce3c7eb7',1,'ARX']]]
 ];

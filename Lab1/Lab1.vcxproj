@@ -131,9 +131,15 @@
   <ItemGroup>
     <ClCompile Include="ARX.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PD.cpp" />
+    <ClCompile Include="PI.cpp" />
+    <ClCompile Include="PID.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ARX.h" />
+    <ClInclude Include="PD.h" />
+    <ClInclude Include="PI.h" />
+    <ClInclude Include="PID.h" />
     <ClInclude Include="SISO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

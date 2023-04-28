@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7esiso_0',['~SISO',['../class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167',1,'SISO']]]
+  ['zapiskonfiguracji_0',['ZapisKonfiguracji',['../class_a_r_x.html#ae8cdcfe00d12d8f78b6a0f204b8668e5',1,'ARX']]]
 ];

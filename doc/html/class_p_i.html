@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Programowanie systemów sterowania: Dokumentacja klasy PI</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Programowanie systemów sterowania
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_p_i-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy PI</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa modelująca regulator typu PI.  
+ <a href="class_p_i.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_p_i_8h_source.html">PI.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla PI</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_p_i.png" usemap="#PI_map" alt=""/>
+  <map id="PI_map" name="PI_map">
+<area href="class_s_i_s_o.html" title="Klasa modelujaca obiekt typu SISO." alt="SISO" shape="rect" coords="0,0,41,24"/>
+<area href="class_p_i_d.html" title="Klasa modelująca regulator typu PID." alt="PID" shape="rect" coords="0,112,41,136"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a38de44e7478d4c68e15c79b48154ac97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a38de44e7478d4c68e15c79b48154ac97">PI</a> (double Kp, double Ti)</td></tr>
+<tr class="memdesc:a38de44e7478d4c68e15c79b48154ac97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <br /></td></tr>
+<tr class="separator:a38de44e7478d4c68e15c79b48154ac97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a560600250a9d98003c059bda0fdab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a07a560600250a9d98003c059bda0fdab">symuluj</a> (double we) override</td></tr>
+<tr class="memdesc:a07a560600250a9d98003c059bda0fdab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda symulujaca regulator. Jako argument przyjmuje wejscie regulatora oraz zwraca obliczone wyjscie regulatora.  <br /></td></tr>
+<tr class="separator:a07a560600250a9d98003c059bda0fdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_s_i_s_o"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_i_s_o')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_s_i_s_o.html">SISO</a></td></tr>
+<tr class="memitem:a8bc62cb5ac471a89869a298b4ebad7b9 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">symuluj</a> (double we)=0</td></tr>
+<tr class="memdesc:a8bc62cb5ac471a89869a298b4ebad7b9 inherit pub_methods_class_s_i_s_o"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda symulujaca obiekt. Metoda czysto wirtualna.  <br /></td></tr>
+<tr class="separator:a8bc62cb5ac471a89869a298b4ebad7b9 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a> ()</td></tr>
+<tr class="memdesc:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wirtualny destruktor.  <br /></td></tr>
+<tr class="separator:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:ad838dbe9b445644f60cba573f9726713"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#ad838dbe9b445644f60cba573f9726713">s_Kp</a></td></tr>
+<tr class="memdesc:ad838dbe9b445644f60cba573f9726713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowująca wzmocnienie regulatora.  <br /></td></tr>
+<tr class="separator:ad838dbe9b445644f60cba573f9726713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c5580aa89e234251f2f757c4734290a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a5c5580aa89e234251f2f757c4734290a">s_Ti</a></td></tr>
+<tr class="memdesc:a5c5580aa89e234251f2f757c4734290a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowująca stałą czasową całkowania.  <br /></td></tr>
+<tr class="separator:a5c5580aa89e234251f2f757c4734290a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa modelująca regulator typu PI. </p>
+<p>Umożliwia obliczenie sterowania na podstawie zadanych nastaw oraz wejścia regulatora. </p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a38de44e7478d4c68e15c79b48154ac97" name="a38de44e7478d4c68e15c79b48154ac97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38de44e7478d4c68e15c79b48154ac97">&#9670;&#160;</a></span>PI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PI::PI </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Kp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Ti</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Konstruktor. </p>
+<p>DOPISAC. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a07a560600250a9d98003c059bda0fdab" name="a07a560600250a9d98003c059bda0fdab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a560600250a9d98003c059bda0fdab">&#9670;&#160;</a></span>symuluj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PI::symuluj </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>we</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda symulujaca regulator. Jako argument przyjmuje wejscie regulatora oraz zwraca obliczone wyjscie regulatora. </p>
+<p>Obliczenie nowego sterowania na podstawie zadanych nastaw regulatora oraz wejścia regulatora.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">we</td><td>wejście regulatora </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>obliczone wyjście regulatora </dd></dl>
+
+<p>Implementuje <a class="el" href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">SISO</a>.</p>
+
+<p>Reimplementowana w <a class="el" href="class_p_i_d.html#a7648126256b4e235105cf978dbd8f894">PID</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="ad838dbe9b445644f60cba573f9726713" name="ad838dbe9b445644f60cba573f9726713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad838dbe9b445644f60cba573f9726713">&#9670;&#160;</a></span>s_Kp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PI::s_Kp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowująca wzmocnienie regulatora. </p>
+
+</div>
+</div>
+<a id="a5c5580aa89e234251f2f757c4734290a" name="a5c5580aa89e234251f2f757c4734290a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c5580aa89e234251f2f757c4734290a">&#9670;&#160;</a></span>s_Ti</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PI::s_Ti</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowująca stałą czasową całkowania. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

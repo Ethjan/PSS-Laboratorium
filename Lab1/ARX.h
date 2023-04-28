@@ -1,14 +1,13 @@
-#pragma once
+﻿#pragma once
 #include "SISO.h"
 #include <vector>
+#include <random>
 #include <deque>
 #include <iostream>
-
 
 /** @class ARX
  * Klasa modelująca obiekt typu %ARX. Umożliwia obliczenie wyjścia na podstawie zadanych parametrów modelu oraz zadanego wyjścia.
  */
-
 class ARX : public SISO {
 private:
     /// Zmienna przechowująca opóźnienie obiektu
@@ -23,12 +22,19 @@ private:
     std::deque<double> s_u;
     /// Zmienna przechowująca poprzednie wartości  wyjścia obiektu
     std::deque<double> s_y;
+    /// Zmienna przechowująca poprzednie wartości  wyjścia obiektu
+    std::default_random_engine s_generator;
+    /// Zmienna przechowująca poprzednie wartości  wyjścia obiektu
+    std::normal_distribution<double> s_dystrybucja;
 public:   
     /**  Konstruktor
     * @brief W przypadku nie zdefiniowania przez użytkownika parametrów obiektu, przyjmowany jest przykladowy model.
     */
     ARX(std::vector<double> A = { -0.5 }, std::vector<double> B = { 1 }, unsigned int nk = 1, double var = 0.0) :
-        s_A(A), s_B(B), s_k(nk), s_var(var), s_y(std::deque<double>(1, 0)), s_u(std::deque<double>(1, 0)) {
+        s_A(A), s_B(B), s_k(nk), s_var(var), s_y(std::deque<double>(1, 0)), s_u(std::deque<double>(1, 0)), s_generator(std::random_device{}()), s_dystrybucja(0.0, 0.01) {
+        if (s_var != 0.0) {
+            std::normal_distribution<double> s_dystrybucja(0.0, sqrt(s_var));
+        }   
         // Dopisanie odpowiedniej ilości zer do wielomianu B związanych z opoznieniem
         for (unsigned int i = 0; i < s_k; i++) {
             s_B.insert(s_B.begin() + i, 0);
@@ -42,8 +48,7 @@ public:
     ///Metoda wypisujaca parametry modelu. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia.
     std::ostream& WypiszParametry(std::ostream& strumien);
     ///Metoda zapisujaca parametry modelu w pliku. Jest bezargumentowa oraz nic nie zwraca.
-    void ZapisKonfiguracji();
+    std::fstream& ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& strumienZapis);
     ///Metoda odczytyjaca parametry modelu z pliku. Jest bezargumentowa oraz nic nie zwraca.
-    void OdczytKonfiguracji();
-
+    std::fstream& OdczytKonfiguracji(std::fstream& strumien);
 };
