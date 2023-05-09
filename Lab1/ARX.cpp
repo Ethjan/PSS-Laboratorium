@@ -48,8 +48,9 @@ std::ostream& ARX::WypiszParametry(std::ostream& strumien){
 }
 
 /**
- * Zapis konfiguracji do pliku (Wielomian A, Wielomian B, Opóźnienie, Wariancja szumu)
- * @param strumien referencja do strumienia
+ * Zapis konfiguracji do pliku (Wielomian A, Wielomian B, Opóźnienie, Wariancja szumu).
+ * @param strumienOdczyt referencja do strumienia do odczytu.
+ * @param strumienZapis referencja do strumienia do zapisu.
  * @return referencja do strumienia
  */
 std::fstream& ARX::ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& strumienZapis) {
@@ -89,7 +90,6 @@ std::fstream& ARX::ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream&
         temp["ARX_War"] = s_var;
         KonfiguracjaZapis.update(temp, true);
     }
-    //std::fstream cos("Konf.json", std::ios::out);
     strumienZapis << std::setw(4) << KonfiguracjaZapis << std::endl;
     return strumienZapis;
 }

@@ -47,8 +47,8 @@ public:
     double symuluj(double we) override;
     ///Metoda wypisujaca parametry modelu. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia.
     std::ostream& WypiszParametry(std::ostream& strumien);
-    ///Metoda zapisujaca parametry modelu w pliku. Jest bezargumentowa oraz nic nie zwraca.
+    ///Metoda zapisujaca parametry modelu w pliku. Jako argumenty przyjmuje referencje do strumieni do odczytu i zapisu oraz zwraca referecje do strumienia do zapisu.
     std::fstream& ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& strumienZapis);
-    ///Metoda odczytyjaca parametry modelu z pliku. Jest bezargumentowa oraz nic nie zwraca.
+    ///Metoda odczytyjaca parametry modelu z pliku. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia.
     std::fstream& OdczytKonfiguracji(std::fstream& strumien);
 };
