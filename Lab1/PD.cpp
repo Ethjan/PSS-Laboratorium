@@ -13,7 +13,8 @@ double PD::symuluj(double we) {
 	double sterowanie;
 	s_e = s_WartZad - we;
 	//obliczenie sterowania
-	sterowanie = s_Kp * s_e + (s_e-s_ePoprzedni) / s_Td;
+	//sterowanie = s_Kp * s_e + (s_e-s_ePoprzedni) / s_Td;
+    sterowanie = obliczP() + obliczD();
 	//ograniczenie sterowania
 	if (sterowanie > 100)
 		sterowanie = 100;
@@ -22,6 +23,30 @@ double PD::symuluj(double we) {
 
 	return sterowanie;
 }
+
+/**
+ * Obliczenie członu proporcjonalnego regulatora.
+ * @return obliczony człon proporcjonalnego regulatora
+ */
+double PD::obliczP() {
+    return s_Kp * s_e;
+}
+/**
+ * Obliczenie członu różniczkującego regulatora.
+ * @return obliczony człon różniczkującego regulatora
+ */
+double PD::obliczD() {
+    return (s_e - s_ePoprzedni) / s_Td;
+}
+
+/**
+ * Zmiana wartości zadanej.
+ * @param WartZad nowa wartość zadana.
+ */
+void PD::zmianaWartZad(double WartZad) {
+    s_WartZad = WartZad;
+}
+
 /**
  * Zapis konfiguracji do pliku (Wzmocnienie regulatora, Stała czasowa różniczkowania, Okres próbkowana, Wartość zadana).
  * @param strumienOdczyt referencja do strumienia do odczytu.

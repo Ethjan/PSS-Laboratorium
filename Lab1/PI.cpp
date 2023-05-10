@@ -13,7 +13,8 @@ double PI::symuluj(double we) {
 	double sterowanie;
 	s_e = s_WartZad - we;
 	//obliczenie sterowania
-	sterowanie = s_Kp * s_e + s_eSum / s_Ti;
+	//sterowanie = s_Kp * s_e + s_eSum / s_Ti;
+    sterowanie = obliczP() + obliczI();
 	//antywindup oraz ograniczenie sterowania
 	if (sterowanie < 100 && sterowanie > 0)
 		s_eSum = s_eSum + s_e * s_Tp;
@@ -24,7 +25,28 @@ double PI::symuluj(double we) {
 
 	return sterowanie;
 }
+/**
+ * Obliczenie członu proporcjonalnego regulatora.
+ * @return obliczony człon proporcjonalnego regulatora
+ */
+double PI::obliczP() {
+    return s_Kp * s_e;
+}
+/**
+ * Obliczenie członu całkującego regulatora.
+ * @return obliczony człon całkujący regulatora
+ */
+double PI::obliczI() {
+    return s_eSum / s_Ti;
+}
 
+/**
+ * Zmiana wartości zadanej.
+ * @param WartZad nowa wartość zadana.
+ */
+void PI::zmianaWartZad(double WartZad){
+    s_WartZad = WartZad;
+}
 /**
  * Zapis konfiguracji do pliku (Wzmocnienie regulatora, Stała czasowa całkowania, Okres próbkowana, Wartość zadana).
  * @param strumienOdczyt referencja do strumienia do odczytu.

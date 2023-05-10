@@ -13,6 +13,7 @@ int main() {
     PID regulator3(0.02, 20, 100, 1,10);
 
     // Test zapisu konfiguracji
+    /*
     std::fstream PlikOdczyt("Konf.json", std::ios::in | std::ios::out);
     std::fstream PlikZapis("Konf.json", std::ios::in | std::ios::out);
     obiekt.ZapisKonfiguracji(PlikOdczyt, PlikZapis);
@@ -29,6 +30,7 @@ int main() {
     std::fstream PlikOdczyt4("Konf.json", std::ios::in | std::ios::out);
     std::fstream PlikZapis4("Konf.json", std::ios::in | std::ios::out);
     regulator3.ZapisKonfiguracji(PlikOdczyt4, PlikZapis4);
+    */
 
     // Test obiektu
     /*
@@ -44,12 +46,12 @@ int main() {
     }
     */
     // Test sterowania
-    /*
+    ///*
     std::ofstream outfile("output.txt");
     double wyjscie=0.0 ,sterowanie;
     for (int i = 0; i < 100
         ; i++) {
-        sterowanie = regulator.symuluj(wyjscie);
+        sterowanie = regulator1.symuluj(wyjscie);
         wyjscie = obiekt.symuluj(sterowanie);
         std::cout << "Wyjscie: " << wyjscie << std::endl;
         if (outfile.is_open()) {
@@ -60,10 +62,12 @@ int main() {
         }
     }
     outfile.close();
-    */
+    //*/
     // Test odczytu konfiguracji
+    /*
     std::fstream PlikOdczyt2("Konf.json", std::ios::in);
     obiekt.OdczytKonfiguracji(PlikOdczyt2);
     obiekt.WypiszParametry(std::cout);
+    */
     return 0;
 };

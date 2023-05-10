@@ -28,6 +28,12 @@ class PD : virtual public  SISO{
 		};
 		///Metoda symulujaca regulator. Jako argument przyjmuje wejscie regulatora oraz zwraca obliczone wyjscie regulatora.
 		double symuluj(double we) override;
+		///Metoda obliczająca człon proporcjonalny regulatora.
+		double obliczP();
+		///Metoda obliczająca człon różniczkujący regulatora.
+		double obliczD();
+		///Metoda zmieniająca wartość zadaną.
+		void zmianaWartZad(double WartZad);
 		///Metoda zapisujaca parametry regulatora w pliku. Jako argumenty przyjmuje referencje do strumieni do odczytu i zapisu oraz zwraca referecje do strumienia do zapisu.
 		std::fstream& ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& strumienZapis);
 		///Metoda odczytyjaca parametry regulatora z pliku. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia.

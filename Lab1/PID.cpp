@@ -13,7 +13,8 @@ double PID::symuluj(double we) {
 	double sterowanie;
 	PI::s_e = PI::s_WartZad - we;
 	//obliczenie sterowania
-	sterowanie = PI::s_Kp * PI::s_e + PI::s_eSum / PI::s_Ti + (PI::s_e - PD::s_ePoprzedni) / PD::s_Td;
+	//sterowanie = PI::s_Kp * PI::s_e + PI::s_eSum / PI::s_Ti + (PI::s_e - PD::s_ePoprzedni) / PD::s_Td;
+    sterowanie = PI::obliczP() + PI::obliczI() + PD::obliczD();
 	//antywindup oraz ograniczenie sterowania
 	if (sterowanie < 100 && sterowanie > 0)
         PI::s_eSum = PI::s_eSum + PI::s_e * PI::s_Tp;
@@ -23,7 +24,13 @@ double PID::symuluj(double we) {
 		sterowanie = 0;
 	return sterowanie;
 }
-
+/**
+ * Zmiana wartości zadanej.
+ * @param WartZad nowa wartość zadana.
+ */
+void PID::zmianaWartZad(double WartZad) {
+    PI::s_WartZad = WartZad;
+}
 /**
  * Zapis konfiguracji do pliku (Wzmocnienie regulatora, Stała czasowa całkowania, Stała czasowa różniczkowania, Okres próbkowana, Wartość zadana).
  * @param strumienOdczyt referencja do strumienia do odczytu.
