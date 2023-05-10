@@ -64,7 +64,6 @@ std::fstream& PD::ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& 
         temp["PD_WartZad"] = s_WartZad;
         KonfiguracjaZapis.update(temp, true);
     }
-    //std::fstream cos("Konf.json", std::ios::out);
     strumienZapis << std::setw(4) << KonfiguracjaZapis << std::endl;
     return strumienZapis;
 }

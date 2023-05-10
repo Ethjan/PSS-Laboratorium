@@ -67,7 +67,6 @@ std::fstream& PI::ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& 
         temp["PI_WartZad"] = s_WartZad;
         KonfiguracjaZapis.update(temp, true);
     }
-    //std::fstream cos("Konf.json", std::ios::out);
     strumienZapis << std::setw(4) << KonfiguracjaZapis << std::endl;
     return strumienZapis;
 }
@@ -77,7 +76,6 @@ std::fstream& PI::ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& 
  * @param strumien referencja do strumienia
  * @return referencja do strumienia
  */
-
 std::fstream& PI::OdczytKonfiguracji(std::fstream& strumien) {
     json KonfiguracjaOdczyt = json::parse(strumien);
     KonfiguracjaOdczyt.at("PI_Kp").get_to(s_Kp);

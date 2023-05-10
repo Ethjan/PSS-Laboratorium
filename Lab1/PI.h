@@ -21,7 +21,7 @@ protected:
 	double s_eSum;
 public:
 	/**  Konstruktor
-	* @brief DOPISAC.
+	* @brief Inicjalizacja wartości klasy.
 	*/
 	PI(double Kp = 1, double Ti = 1, double Tp = 1, double WartZad = 0) :s_Kp(Kp), s_Ti(Ti), s_Tp(Tp), s_WartZad(WartZad), s_e(0.0), s_eSum(0.0) {
 	};

@@ -9,7 +9,7 @@
 class PID: public PI, public PD{
 	public:
 		/**  Konstruktor
-		* @brief DOPISAC.
+		* @brief Konstruktor wywolujący kontruktory klasy PI i PD.
 		*/
 		PID(double Kp = 1, double Ti = 1, double Td = 1, double Tp = 1, double WartZad = 0) : PI(Kp, Ti, Tp, WartZad),PD(Kp, Td){
 

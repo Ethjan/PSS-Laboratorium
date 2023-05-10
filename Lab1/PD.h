@@ -21,7 +21,7 @@ class PD : virtual public  SISO{
 		double s_ePoprzedni;
 	public:
 		/**  Konstruktor
-		* @brief DOPISAC.
+		* @brief Inicjalizacja wartości klasy.
 		*/
 		PD(double Kp = 1, double Td = 1, double Tp = 1, double WartZad = 0) :s_Kp(Kp), s_Td(Td), s_Tp(Tp), s_WartZad(WartZad), s_e(0.0), s_ePoprzedni(0.0) {
 
