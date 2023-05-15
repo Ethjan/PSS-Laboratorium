@@ -77,10 +77,10 @@ int main() {
     */
 
     // Test Generatora
-    Komponent* simple = new KonkretnyKomponent;
-    Komponent* generator1 = new DekoratorSzum(simple,1);
+    Komponent* simple = new KonkretnyKomponent(3.0);
+    Komponent* generator1 = new DekoratorSzum(simple,0.1);
     Komponent* generator2 = new DekoratorSin(generator1,1,60,0);
-    Komponent* generator3 = new DekoratorProst(generator2,1,5);
+    Komponent* generator3 = new DekoratorProst(generator2,1,20);
 
     std::ofstream outfile("Generator.txt");
     double wartosc;

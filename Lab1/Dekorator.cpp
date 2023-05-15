@@ -1,8 +1,15 @@
 #include "Dekorator.h"
 #include <iostream>
 
+/**
+ * Dopisaæ
+ * @return Dopisaæ
+ */
 double Dekorator::Generuj(){
-	return 0.0;
+    if (s_komponent != nullptr) {
+        return s_komponent->Generuj();
+    }
+    return 0.0;
 }
 
 void Dekorator::sprawdzacz(){

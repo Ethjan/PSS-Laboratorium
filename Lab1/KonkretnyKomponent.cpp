@@ -1,5 +1,9 @@
 #include "KonkretnyKomponent.h"
 
+/**
+ * Dopisaæ
+ * @return Dopisaæ
+ */
 double KonkretnyKomponent::Generuj() {
-	return 0.0;
+	return s_wartStala;
 }
