@@ -1,26 +1,24 @@
-#pragma once
+ï»¿#pragma once
 #include "Dekorator.h"
 
 /** @class DekoratorSin
- * Klasa %DekoratorSin. Klasa implementuj¹ca generatora sygna³u sinusoidalnego o zadanej amplitudzie, czêstotliwoœci oraz przesuniêciu fazowym.
+ * Klasa %DekoratorSin. Klasa implementujÄ…ca generatora sygnaÅ‚u sinusoidalnego o zadanej amplitudzie, czÄ™stotliwoÅ›ci oraz przesuniÄ™ciu fazowym.
  */
 class DekoratorSin : public Dekorator
 {
 	private:
-		/// Zmienna przechowywuj¹ca amplitudê sinusa.
+		/// Zmienna przechowywujÄ…ca amplitudÄ™ sinusa.
 		double s_amplituda;
-		/// Zmienna przechowywuj¹ca czêstotliwoœæ sinusa.
+		/// Zmienna przechowywujÄ…ca czÄ™stotliwoÅ›Ä‡ sinusa.
 		double s_czestotliwosc;
-		/// Zmienna przechowywuj¹ca przesuniêcie fazowe sinusa. Jest to iloœæ próbek, które zostanie przesuniêty sinus.
+		/// Zmienna przechowywujÄ…ca przesuniÄ™cie fazowe sinusa. Jest to iloÅ›Ä‡ prÃ³bek, ktÃ³re zostanie przesuniÄ™ty sinus.
 		double s_przesuniecieFazowe;
 	public:
-		/**  Konstruktor
-		* @brief Dopisaæ.
+		/** Konstruktor
+		* @brief Jako argument przyjmuje wskaÅºnik do klasy oraz amplitudÄ™, czÄ™stotliwoÅ›Ä‡ i przesuniÄ™cie fazowe sinusoidy.
 		*/
-		DekoratorSin(Komponent* komponent,double amplituda, double czestotliwosc, double przesuniecieFazowe) : Dekorator(komponent), s_amplituda(amplituda),s_czestotliwosc(czestotliwosc),s_przesuniecieFazowe(przesuniecieFazowe) {
-
-		}
-		///Metoda implementuj¹ca generowanie wartoœci.
+		DekoratorSin(Komponent* komponent,double amplituda, double czestotliwosc, double przesuniecieFazowe) : Dekorator(komponent), s_amplituda(amplituda),s_czestotliwosc(czestotliwosc),s_przesuniecieFazowe(przesuniecieFazowe) {}
+		///Metoda implementujÄ…ca generowanie wartoÅ›ci.
 		double Generuj() override;
 };
 

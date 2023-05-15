@@ -1,24 +1,22 @@
-#pragma once
+ï»¿#pragma once
 #include "Dekorator.h"
 
 /** @class DekoratorProst
- * Klasa %DekoratorProst. Klasa implementuj¹ca generator sygna³u prostok¹tnego o zadanej amplitudzie oraz szerokoœci impulsu.
+ * Klasa %DekoratorProst. Klasa implementujÄ…ca generator sygnaÅ‚u prostokÄ…tnego o zadanej amplitudzie oraz szerokoÅ›ci impulsu.
  */
 class DekoratorProst : public Dekorator
 {
 	private:
-		/// Zmienna przechowywuj¹ca szerokoœæ sygna³u prostok¹tnego
+		/// Zmienna przechowywujÄ…ca szerokoÅ›Ä‡ sygnaÅ‚u prostokÄ…tnego
 		double s_wypelnienie;
-		/// Zmienna przechowywuj¹ca amplitudê sygna³u prostok¹tnego
+		/// Zmienna przechowywujÄ…ca amplitudÄ™ sygnaÅ‚u prostokÄ…tnego
 		double s_amplituda;
 	public:
-		/**  Konstruktor
-		* @brief Dopisaæ.
+		/** Konstruktor
+		* @brief Jako argument przyjmuje wskaÅºnik do klasy oraz amplitudÄ™ i szerokoÅ›Ä‡ sygnaÅ‚u prostokÄ…tnego.
 		*/
-		DekoratorProst(Komponent* komponent, double amplituda, double wypelnienie) : Dekorator(komponent) , s_amplituda(amplituda), s_wypelnienie(wypelnienie){
-
-		}
-		///Metoda implementuj¹ca generowanie wartoœci.
+		DekoratorProst(Komponent* komponent, double amplituda, double wypelnienie) : Dekorator(komponent) , s_amplituda(amplituda), s_wypelnienie(wypelnienie){}
+		///Metoda implementujÄ…ca generowanie wartoÅ›ci.
 		double Generuj() override;
 };
 

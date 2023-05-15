@@ -16,9 +16,7 @@ class PID: public PI, public PD{
 		};
 		
 		///Metoda symulujaca regulator. Jako argument przyjmuje wejscie regulatora oraz zwraca obliczone wyjscie regulatora.
-		double symuluj(double we) override;
-		///Metoda zmieniająca wartość zadaną.
-		void zmianaWartZad(double WartZad);
+		double symuluj(double uchyb) override;
 		///Metoda zapisujaca parametry regulatora w pliku. Jako argumenty przyjmuje referencje do strumieni do odczytu i zapisu oraz zwraca referecje do strumienia do zapisu.
 		std::fstream& ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& strumienZapis);
 		///Metoda odczytyjaca parametry regulatora z pliku. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia.

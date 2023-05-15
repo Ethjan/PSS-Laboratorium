@@ -53,11 +53,10 @@ int main() {
     */
     // Test sterowania
     /*
-    regulator1.zmianaWartZad(5);
     std::ofstream outfile("output.txt");
-    double wyjscie=0.0 ,sterowanie;
+    double wyjscie=0.0 ,sterowanie ,wartZadana = 3.0;
     for (int i = 0; i < 100; i++) {
-        sterowanie = regulator1.symuluj(wyjscie);
+        sterowanie = regulator1.symuluj(wartZadana - wyjscie);
         wyjscie = obiekt.symuluj(sterowanie);
         std::cout << "Wyjscie: " << wyjscie << std::endl;
         if (outfile.is_open()) {
@@ -76,17 +75,18 @@ int main() {
     obiekt.WypiszParametry(std::cout);
     */
 
+    ///*
     // Test Generatora
-    Komponent* simple = new KonkretnyKomponent(3.0);
-    Komponent* generator1 = new DekoratorSzum(simple,0.1);
-    Komponent* generator2 = new DekoratorSin(generator1,1,60,0);
-    Komponent* generator3 = new DekoratorProst(generator2,1,20);
+    Komponent* generatorKonkretny = new KonkretnyKomponent(2.0);
+    Komponent* generatorSzum = new DekoratorSzum(generatorKonkretny,0.1);
+    Komponent* generatorSzumSin = new DekoratorSin(generatorSzum,1,60,0);
+    Komponent* generatorSzumSinProst = new DekoratorProst(generatorSzumSin,1,20);
 
     std::ofstream outfile("Generator.txt");
     double wartosc;
 
     for (int i = 0; i < 100; i++) {
-        wartosc = generator3->Generuj();
+        wartosc = generatorSzumSinProst->Generuj();
         std::cout << "Wyjscie: " << wartosc << std::endl;
         if (outfile.is_open()) {
             outfile << wartosc << std::endl;
@@ -97,9 +97,11 @@ int main() {
     }
     outfile.close();
 
-    delete simple;
-    delete generator1;
-    delete generator2;
-    delete generator3;
+    delete generatorKonkretny;
+    delete generatorSzum;
+    delete generatorSzumSin;
+    delete generatorSzumSinProst;
+    //*/
+
     return 0;
 };

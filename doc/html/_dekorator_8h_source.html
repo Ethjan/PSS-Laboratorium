@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Programowanie systemów sterowania: Plik źródłowy Lab1/Dekorator.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Programowanie systemów sterowania
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_21d3850f9f3538f348e1a90fdd8b50aa.html">Lab1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Dekorator.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_dekorator_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_komponent_8h.html">Komponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_dekorator.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_dekorator.html">Dekorator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_komponent.html">Komponent</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_dekorator.html#a758b88dbb2f6f79cc351e76eecf5cd36">   12</a></span>    <a class="code hl_class" href="class_komponent.html">Komponent</a>* <a class="code hl_variable" href="class_dekorator.html#a758b88dbb2f6f79cc351e76eecf5cd36">s_komponent</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_dekorator.html#a5f21d6dd5b355f50982cfc932a359784">   14</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_dekorator.html#a5f21d6dd5b355f50982cfc932a359784">s_probka</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>: </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_dekorator.html#a93c3f7b2aae3824a5358ca0cad3e8436">   19</a></span>    <a class="code hl_function" href="class_dekorator.html#a93c3f7b2aae3824a5358ca0cad3e8436">Dekorator</a>(<a class="code hl_class" href="class_komponent.html">Komponent</a>* komponent) : <a class="code hl_variable" href="class_dekorator.html#a758b88dbb2f6f79cc351e76eecf5cd36">s_komponent</a>(komponent), <a class="code hl_variable" href="class_dekorator.html#a5f21d6dd5b355f50982cfc932a359784">s_probka</a>(0){}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_dekorator.html#a86e2d81eea12d093b8d4972f06daf1de">Generuj</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="ttc" id="a_komponent_8h_html"><div class="ttname"><a href="_komponent_8h.html">Komponent.h</a></div></div>
+<div class="ttc" id="aclass_dekorator_html"><div class="ttname"><a href="class_dekorator.html">Dekorator</a></div><div class="ttdoc">Klasa Dekorator.</div><div class="ttdef"><b>Definition:</b> Dekorator.h:9</div></div>
+<div class="ttc" id="aclass_dekorator_html_a5f21d6dd5b355f50982cfc932a359784"><div class="ttname"><a href="class_dekorator.html#a5f21d6dd5b355f50982cfc932a359784">Dekorator::s_probka</a></div><div class="ttdeci">unsigned int s_probka</div><div class="ttdoc">Zmienna przechowywująca numer próbki.</div><div class="ttdef"><b>Definition:</b> Dekorator.h:14</div></div>
+<div class="ttc" id="aclass_dekorator_html_a758b88dbb2f6f79cc351e76eecf5cd36"><div class="ttname"><a href="class_dekorator.html#a758b88dbb2f6f79cc351e76eecf5cd36">Dekorator::s_komponent</a></div><div class="ttdeci">Komponent * s_komponent</div><div class="ttdoc">Wskaźnik do obiektu Komponent.</div><div class="ttdef"><b>Definition:</b> Dekorator.h:12</div></div>
+<div class="ttc" id="aclass_dekorator_html_a86e2d81eea12d093b8d4972f06daf1de"><div class="ttname"><a href="class_dekorator.html#a86e2d81eea12d093b8d4972f06daf1de">Dekorator::Generuj</a></div><div class="ttdeci">double Generuj() override</div><div class="ttdoc">Metoda implementująca generowanie wartości.</div><div class="ttdef"><b>Definition:</b> Dekorator.cpp:7</div></div>
+<div class="ttc" id="aclass_dekorator_html_a93c3f7b2aae3824a5358ca0cad3e8436"><div class="ttname"><a href="class_dekorator.html#a93c3f7b2aae3824a5358ca0cad3e8436">Dekorator::Dekorator</a></div><div class="ttdeci">Dekorator(Komponent *komponent)</div><div class="ttdoc">Konstruktor.</div><div class="ttdef"><b>Definition:</b> Dekorator.h:19</div></div>
+<div class="ttc" id="aclass_komponent_html"><div class="ttname"><a href="class_komponent.html">Komponent</a></div><div class="ttdoc">Klasa Komponent.</div><div class="ttdef"><b>Definition:</b> Komponent.h:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

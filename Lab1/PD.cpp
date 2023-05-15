@@ -9,42 +9,34 @@ using json = nlohmann::json;
  * @param we wejście regulatora
  * @return obliczone wyjście regulatora
  */
-double PD::symuluj(double we) {
+double PD::symuluj(double uchyb) {
 	double sterowanie;
-	s_e = s_WartZad - we;
 	//obliczenie sterowania
-	//sterowanie = s_Kp * s_e + (s_e-s_ePoprzedni) / s_Td;
-    sterowanie = obliczP() + obliczD();
+    sterowanie = obliczP(uchyb) + obliczD(uchyb);
 	//ograniczenie sterowania
 	if (sterowanie > 100)
 		sterowanie = 100;
 	else if (sterowanie < 0)
 		sterowanie = 0;
-
 	return sterowanie;
 }
 
 /**
  * Obliczenie członu proporcjonalnego regulatora.
+ * @param uchyb wartość uchybu
  * @return obliczony człon proporcjonalnego regulatora
  */
-double PD::obliczP() {
-    return s_Kp * s_e;
-}
-/**
- * Obliczenie członu różniczkującego regulatora.
- * @return obliczony człon różniczkującego regulatora
- */
-double PD::obliczD() {
-    return (s_e - s_ePoprzedni) / s_Td;
+double PD::obliczP(double uchyb) {
+    return s_Kp * uchyb;
 }
 
 /**
- * Zmiana wartości zadanej.
- * @param WartZad nowa wartość zadana.
+ * Obliczenie członu różniczkującego regulatora.
+ * @param uchyb wartość uchybu
+ * @return obliczony człon różniczkującego regulatora
  */
-void PD::zmianaWartZad(double WartZad) {
-    s_WartZad = WartZad;
+double PD::obliczD(double uchyb) {
+    return (uchyb - s_ePoprzedni) / s_Td;
 }
 
 /**
@@ -98,7 +90,6 @@ std::fstream& PD::ZapisKonfiguracji(std::fstream& strumienOdczyt, std::fstream& 
  * @param strumien referencja do strumienia
  * @return referencja do strumienia
  */
-
 std::fstream& PD::OdczytKonfiguracji(std::fstream& strumien) {
     json KonfiguracjaOdczyt = json::parse(strumien);
     KonfiguracjaOdczyt.at("PD_Kp").get_to(s_Kp);

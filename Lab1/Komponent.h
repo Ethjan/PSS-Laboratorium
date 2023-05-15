@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 /** @class Komponent
  * Klasa %Komponent. Klasa czysto abstrakcyjna.
@@ -6,7 +6,7 @@
 class Komponent
 {
 public:
-	///Metoda implementuj¹ca generowanie wartoœci.
+	///Metoda implementujÄ…ca generowanie wartoÅ›ci.
 	virtual double Generuj() = 0;
 	///Wirtualny destruktor.
 	virtual ~Komponent(){};

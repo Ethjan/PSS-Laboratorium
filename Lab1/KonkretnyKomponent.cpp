@@ -1,8 +1,8 @@
-#include "KonkretnyKomponent.h"
+﻿#include "KonkretnyKomponent.h"
 
 /**
- * Dopisa�
- * @return Dopisa�
+ * Metoda odpowiedzialna za generację stałego sygnału
+ * @return Wartość stała zadana przez użytkownika
  */
 double KonkretnyKomponent::Generuj() {
 	return s_wartStala;

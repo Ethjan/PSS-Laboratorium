@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['siso_0',['SISO',['../class_s_i_s_o.html',1,'']]]
+  ['komponent_0',['Komponent',['../class_komponent.html',1,'']]],
+  ['konkretnykomponent_1',['KonkretnyKomponent',['../class_konkretny_komponent.html',1,'']]]
 ];

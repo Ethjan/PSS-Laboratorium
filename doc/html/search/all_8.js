@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['_7esiso_0',['~SISO',['../class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167',1,'SISO']]]
+  ['s_5fa_0',['s_A',['../class_a_r_x.html#af1bf7f3389e34e9e5286bd24a84214b1',1,'ARX']]],
+  ['s_5famplituda_1',['s_amplituda',['../class_dekorator_prost.html#a1e6acb418f87c2df8a28bea0840d1d70',1,'DekoratorProst::s_amplituda()'],['../class_dekorator_sin.html#afc957a0e9c863be3f3a5e0ff4d82118a',1,'DekoratorSin::s_amplituda()']]],
+  ['s_5fb_2',['s_B',['../class_a_r_x.html#a524befe2bbbcbc2461fa811b6d1e0611',1,'ARX']]],
+  ['s_5fczestotliwosc_3',['s_czestotliwosc',['../class_dekorator_sin.html#a5f73fa620121bbd4051a6815206604d8',1,'DekoratorSin']]],
+  ['s_5fdystrybucja_4',['s_dystrybucja',['../class_a_r_x.html#a934dbd25c98703798df8e433085c4074',1,'ARX::s_dystrybucja()'],['../class_dekorator_szum.html#ae911f5c12ce9fca5deb330360dfdd7a3',1,'DekoratorSzum::s_dystrybucja()']]],
+  ['s_5fepoprzedni_5',['s_ePoprzedni',['../class_p_d.html#a038a34ca9fae08bb9e07ea9951bc2a0f',1,'PD']]],
+  ['s_5fesum_6',['s_eSum',['../class_p_i.html#a75545e9564c268a54cde4264bfa7ba05',1,'PI']]],
+  ['s_5fgenerator_7',['s_generator',['../class_a_r_x.html#a8574ac79fbd75a8c366062ce4dd1bdc0',1,'ARX::s_generator()'],['../class_dekorator_szum.html#a3e48c22bc94eb5aedd88e653a1e6a95a',1,'DekoratorSzum::s_generator()']]],
+  ['s_5fk_8',['s_k',['../class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a',1,'ARX']]],
+  ['s_5fkomponent_9',['s_komponent',['../class_dekorator.html#a758b88dbb2f6f79cc351e76eecf5cd36',1,'Dekorator']]],
+  ['s_5fkp_10',['s_Kp',['../class_p_d.html#a6490456e74c5d26a9cba3da14db278a2',1,'PD::s_Kp()'],['../class_p_i.html#ad838dbe9b445644f60cba573f9726713',1,'PI::s_Kp()']]],
+  ['s_5fodchyleniestand_11',['s_odchylenieStand',['../class_dekorator_szum.html#a7642a6ecadda7f2001ed44088282f7cc',1,'DekoratorSzum']]],
+  ['s_5fprobka_12',['s_probka',['../class_dekorator.html#a5f21d6dd5b355f50982cfc932a359784',1,'Dekorator']]],
+  ['s_5fprzesunieciefazowe_13',['s_przesuniecieFazowe',['../class_dekorator_sin.html#afe0c35fd3a588f3e4cf3dcdcddae9273',1,'DekoratorSin']]],
+  ['s_5ftd_14',['s_Td',['../class_p_d.html#a0996108d40554623b5c3f244ab3a3969',1,'PD']]],
+  ['s_5fti_15',['s_Ti',['../class_p_i.html#a5c5580aa89e234251f2f757c4734290a',1,'PI']]],
+  ['s_5ftp_16',['s_Tp',['../class_p_d.html#a5a1b64e2311788e0a36b535d31172c74',1,'PD::s_Tp()'],['../class_p_i.html#a8f206f0a2c7f6a19f29432f04addf09c',1,'PI::s_Tp()']]],
+  ['s_5fu_17',['s_u',['../class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7',1,'ARX']]],
+  ['s_5fvar_18',['s_var',['../class_a_r_x.html#a288b08e79f73af4d009b43fcabed4702',1,'ARX']]],
+  ['s_5fwartstala_19',['s_wartStala',['../class_konkretny_komponent.html#a65a3805663108969459d1b6c677ec96f',1,'KonkretnyKomponent']]],
+  ['s_5fwartzad_20',['s_WartZad',['../class_p_d.html#aed6768092546b24886ffcb56a10d3a3a',1,'PD::s_WartZad()'],['../class_p_i.html#a96dc900c91f1d66c6a183e2cc433faf4',1,'PI::s_WartZad()']]],
+  ['s_5fwypelnienie_21',['s_wypelnienie',['../class_dekorator_prost.html#a2ca5ccea4db2b3cff0a9328cac5cf5c7',1,'DekoratorProst']]],
+  ['s_5fy_22',['s_y',['../class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639',1,'ARX']]],
+  ['siso_23',['SISO',['../class_s_i_s_o.html',1,'']]],
+  ['siso_2eh_24',['SISO.h',['../_s_i_s_o_8h.html',1,'']]],
+  ['symuluj_25',['symuluj',['../class_a_r_x.html#a2d22a57d8eace550755a6b423b20f959',1,'ARX::symuluj()'],['../class_p_d.html#a6248b40ce1018d1ec1bac804aeae2edf',1,'PD::symuluj()'],['../class_p_i.html#aae167d6adc534c771d75114e7c3dfc94',1,'PI::symuluj()'],['../class_p_i_d.html#a4068d76dacfffb676e41f38a7bb966cd',1,'PID::symuluj()'],['../class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9',1,'SISO::symuluj()']]]
 ];

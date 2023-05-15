@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "Komponent.h"
 
 /** @class Dekorator
@@ -8,20 +8,17 @@
 class Dekorator : public Komponent
 {
 protected:
-    /// WskaŸnik do obiektu Komponent
+    /// WskaÅºnik do obiektu Komponent
     Komponent* s_komponent;
-    /// Zmienna przechowywuj¹ca numer próbki
+    /// Zmienna przechowywujÄ…ca numer prÃ³bki
     unsigned int s_probka;
 public: 
     /**  Konstruktor
-    * @brief Dopisaæ.
+    * @brief Jako argument przyjmuje wskaÅºnik do klasy.
     */
     Dekorator(Komponent* komponent) : s_komponent(komponent), s_probka(0){}
-    ///Metoda implementuj¹ca generowanie wartoœci.
+    ///Metoda implementujÄ…ca generowanie wartoÅ›ci.
     double Generuj() override;
-
-    // Do usunuêcia
-    void sprawdzacz();
     
 };
 

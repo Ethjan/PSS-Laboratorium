@@ -1,12 +1,11 @@
-#include "DekoratorSzum.h"
+Ôªø#include "DekoratorSzum.h"
 
 /**
- * Generowanie wartoúci konretnego sygna≥u o zadanych parametrach
- * @return wygenerowana wartoúÊ sygna≥u
+ * Generowanie warto≈õci konretnego sygna≈Çu o zadanych parametrach
+ * @return wygenerowana warto≈õƒá sygna≈Çu
  */
 double DekoratorSzum::Generuj() {
 	double wartosc = s_dystrybucja(s_generator);
 	s_probka++;
-	//Dekorator::sprawdzacz();
 	return wartosc + Dekorator::Generuj();
 }

@@ -72,7 +72,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
-<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="#pro-attribs">Atrybuty chronione</a> &#124;
 <a href="class_p_i-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle"><div class="title">Dokumentacja klasy PI</div></div>
 </div><!--header-->
@@ -95,12 +95,24 @@ Diagram dziedziczenia dla PI</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a38de44e7478d4c68e15c79b48154ac97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a38de44e7478d4c68e15c79b48154ac97">PI</a> (double Kp, double Ti)</td></tr>
-<tr class="memdesc:a38de44e7478d4c68e15c79b48154ac97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <br /></td></tr>
-<tr class="separator:a38de44e7478d4c68e15c79b48154ac97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07a560600250a9d98003c059bda0fdab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a07a560600250a9d98003c059bda0fdab">symuluj</a> (double we) override</td></tr>
-<tr class="memdesc:a07a560600250a9d98003c059bda0fdab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda symulujaca regulator. Jako argument przyjmuje wejscie regulatora oraz zwraca obliczone wyjscie regulatora.  <br /></td></tr>
-<tr class="separator:a07a560600250a9d98003c059bda0fdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55f892d569709ab3bb3b9ae3cce8c43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#ad55f892d569709ab3bb3b9ae3cce8c43">PI</a> (double Kp=1, double Ti=1, double Tp=1, double WartZad=0)</td></tr>
+<tr class="memdesc:ad55f892d569709ab3bb3b9ae3cce8c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <br /></td></tr>
+<tr class="separator:ad55f892d569709ab3bb3b9ae3cce8c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae167d6adc534c771d75114e7c3dfc94"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#aae167d6adc534c771d75114e7c3dfc94">symuluj</a> (double uchyb) override</td></tr>
+<tr class="memdesc:aae167d6adc534c771d75114e7c3dfc94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda symulujaca regulator. Jako argument przyjmuje wejscie regulatora oraz zwraca obliczone wyjscie regulatora.  <br /></td></tr>
+<tr class="separator:aae167d6adc534c771d75114e7c3dfc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7dcd0cfddccb48b10f57b62863800e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a1f7dcd0cfddccb48b10f57b62863800e">obliczP</a> (double uchyb)</td></tr>
+<tr class="memdesc:a1f7dcd0cfddccb48b10f57b62863800e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda obliczająca człon proporcjonalny regulatora.  <br /></td></tr>
+<tr class="separator:a1f7dcd0cfddccb48b10f57b62863800e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cefe1186c8b3f402f797f3092483de6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a2cefe1186c8b3f402f797f3092483de6">obliczI</a> ()</td></tr>
+<tr class="memdesc:a2cefe1186c8b3f402f797f3092483de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda obliczająca człon całkujący regulatora.  <br /></td></tr>
+<tr class="separator:a2cefe1186c8b3f402f797f3092483de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc99ffeec220647306c4cf723f5d155"><td class="memItemLeft" align="right" valign="top">std::fstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a6dc99ffeec220647306c4cf723f5d155">ZapisKonfiguracji</a> (std::fstream &amp;strumienOdczyt, std::fstream &amp;strumienZapis)</td></tr>
+<tr class="memdesc:a6dc99ffeec220647306c4cf723f5d155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zapisujaca parametry regulatora w pliku. Jako argumenty przyjmuje referencje do strumieni do odczytu i zapisu oraz zwraca referecje do strumienia do zapisu.  <br /></td></tr>
+<tr class="separator:a6dc99ffeec220647306c4cf723f5d155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae70dc48e5fb752af69f55872042d672b"><td class="memItemLeft" align="right" valign="top">std::fstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#ae70dc48e5fb752af69f55872042d672b">OdczytKonfiguracji</a> (std::fstream &amp;strumien)</td></tr>
+<tr class="memdesc:ae70dc48e5fb752af69f55872042d672b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odczytyjaca parametry regulatora z pliku. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia.  <br /></td></tr>
+<tr class="separator:ae70dc48e5fb752af69f55872042d672b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_s_i_s_o"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_i_s_o')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_s_i_s_o.html">SISO</a></td></tr>
 <tr class="memitem:a8bc62cb5ac471a89869a298b4ebad7b9 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">symuluj</a> (double we)=0</td></tr>
 <tr class="memdesc:a8bc62cb5ac471a89869a298b4ebad7b9 inherit pub_methods_class_s_i_s_o"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda symulujaca obiekt. Metoda czysto wirtualna.  <br /></td></tr>
@@ -109,21 +121,30 @@ Metody publiczne</h2></td></tr>
 <tr class="memdesc:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wirtualny destruktor.  <br /></td></tr>
 <tr class="separator:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Atrybuty prywatne</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atrybuty chronione</h2></td></tr>
 <tr class="memitem:ad838dbe9b445644f60cba573f9726713"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#ad838dbe9b445644f60cba573f9726713">s_Kp</a></td></tr>
 <tr class="memdesc:ad838dbe9b445644f60cba573f9726713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowująca wzmocnienie regulatora.  <br /></td></tr>
 <tr class="separator:ad838dbe9b445644f60cba573f9726713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c5580aa89e234251f2f757c4734290a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a5c5580aa89e234251f2f757c4734290a">s_Ti</a></td></tr>
 <tr class="memdesc:a5c5580aa89e234251f2f757c4734290a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowująca stałą czasową całkowania.  <br /></td></tr>
 <tr class="separator:a5c5580aa89e234251f2f757c4734290a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f206f0a2c7f6a19f29432f04addf09c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a8f206f0a2c7f6a19f29432f04addf09c">s_Tp</a></td></tr>
+<tr class="memdesc:a8f206f0a2c7f6a19f29432f04addf09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowująca czas próbkowania.  <br /></td></tr>
+<tr class="separator:a8f206f0a2c7f6a19f29432f04addf09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96dc900c91f1d66c6a183e2cc433faf4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a96dc900c91f1d66c6a183e2cc433faf4">s_WartZad</a></td></tr>
+<tr class="memdesc:a96dc900c91f1d66c6a183e2cc433faf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowująca wartość zadaną  <br /></td></tr>
+<tr class="separator:a96dc900c91f1d66c6a183e2cc433faf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75545e9564c268a54cde4264bfa7ba05"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a75545e9564c268a54cde4264bfa7ba05">s_eSum</a></td></tr>
+<tr class="memdesc:a75545e9564c268a54cde4264bfa7ba05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowująca sumę uchybów.  <br /></td></tr>
+<tr class="separator:a75545e9564c268a54cde4264bfa7ba05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa modelująca regulator typu PI. </p>
 <p>Umożliwia obliczenie sterowania na podstawie zadanych nastaw oraz wejścia regulatora. </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a id="a38de44e7478d4c68e15c79b48154ac97" name="a38de44e7478d4c68e15c79b48154ac97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38de44e7478d4c68e15c79b48154ac97">&#9670;&#160;</a></span>PI()</h2>
+<a id="ad55f892d569709ab3bb3b9ae3cce8c43" name="ad55f892d569709ab3bb3b9ae3cce8c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55f892d569709ab3bb3b9ae3cce8c43">&#9670;&#160;</a></span>PI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,13 +156,25 @@ Atrybuty prywatne</h2></td></tr>
           <td class="memname">PI::PI </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>Kp</em>, </td>
+          <td class="paramname"><em>Kp</em> = <code>1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>Ti</em>&#160;</td>
+          <td class="paramname"><em>Ti</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Tp</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>WartZad</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -157,13 +190,90 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Konstruktor. </p>
-<p>DOPISAC. </p>
+<p>Inicjalizacja wartości klasy. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a id="a07a560600250a9d98003c059bda0fdab" name="a07a560600250a9d98003c059bda0fdab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07a560600250a9d98003c059bda0fdab">&#9670;&#160;</a></span>symuluj()</h2>
+<a id="a2cefe1186c8b3f402f797f3092483de6" name="a2cefe1186c8b3f402f797f3092483de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cefe1186c8b3f402f797f3092483de6">&#9670;&#160;</a></span>obliczI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PI::obliczI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda obliczająca człon całkujący regulatora. </p>
+<p>Obliczenie członu całkującego regulatora.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>obliczony człon całkujący regulatora </dd></dl>
+
+</div>
+</div>
+<a id="a1f7dcd0cfddccb48b10f57b62863800e" name="a1f7dcd0cfddccb48b10f57b62863800e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7dcd0cfddccb48b10f57b62863800e">&#9670;&#160;</a></span>obliczP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PI::obliczP </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>uchyb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda obliczająca człon proporcjonalny regulatora. </p>
+<p>Obliczenie członu proporcjonalnego regulatora.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uchyb</td><td>wartość uchybu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>obliczony człon proporcjonalnego regulatora </dd></dl>
+
+</div>
+</div>
+<a id="ae70dc48e5fb752af69f55872042d672b" name="ae70dc48e5fb752af69f55872042d672b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70dc48e5fb752af69f55872042d672b">&#9670;&#160;</a></span>OdczytKonfiguracji()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::fstream &amp; PI::OdczytKonfiguracji </td>
+          <td>(</td>
+          <td class="paramtype">std::fstream &amp;&#160;</td>
+          <td class="paramname"><em>strumien</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda odczytyjaca parametry regulatora z pliku. Jako argument przyjmuje referencje do strumienia oraz zwraca referecje do strumienia. </p>
+<p>Odczyt konfiguracji z pliku (Wzmocnienie regulatora, Stała czasowa całkowania, Okres próbkowana, Wartość zadana).</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strumien</td><td>referencja do strumienia </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>referencja do strumienia </dd></dl>
+
+</div>
+</div>
+<a id="aae167d6adc534c771d75114e7c3dfc94" name="aae167d6adc534c771d75114e7c3dfc94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae167d6adc534c771d75114e7c3dfc94">&#9670;&#160;</a></span>symuluj()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +285,7 @@ Atrybuty prywatne</h2></td></tr>
           <td class="memname">double PI::symuluj </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>we</em></td><td>)</td>
+          <td class="paramname"><em>uchyb</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -198,11 +308,74 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Implementuje <a class="el" href="class_s_i_s_o.html#a8bc62cb5ac471a89869a298b4ebad7b9">SISO</a>.</p>
 
-<p>Reimplementowana w <a class="el" href="class_p_i_d.html#a7648126256b4e235105cf978dbd8f894">PID</a>.</p>
+<p>Reimplementowana w <a class="el" href="class_p_i_d.html#a4068d76dacfffb676e41f38a7bb966cd">PID</a>.</p>
+
+</div>
+</div>
+<a id="a6dc99ffeec220647306c4cf723f5d155" name="a6dc99ffeec220647306c4cf723f5d155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc99ffeec220647306c4cf723f5d155">&#9670;&#160;</a></span>ZapisKonfiguracji()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::fstream &amp; PI::ZapisKonfiguracji </td>
+          <td>(</td>
+          <td class="paramtype">std::fstream &amp;&#160;</td>
+          <td class="paramname"><em>strumienOdczyt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::fstream &amp;&#160;</td>
+          <td class="paramname"><em>strumienZapis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda zapisujaca parametry regulatora w pliku. Jako argumenty przyjmuje referencje do strumieni do odczytu i zapisu oraz zwraca referecje do strumienia do zapisu. </p>
+<p>Zapis konfiguracji do pliku (Wzmocnienie regulatora, Stała czasowa całkowania, Okres próbkowana, Wartość zadana).</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strumienOdczyt</td><td>referencja do strumienia do odczytu. </td></tr>
+    <tr><td class="paramname">strumienZapis</td><td>referencja do strumienia do zapisu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>referencja do strumienia </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a75545e9564c268a54cde4264bfa7ba05" name="a75545e9564c268a54cde4264bfa7ba05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75545e9564c268a54cde4264bfa7ba05">&#9670;&#160;</a></span>s_eSum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PI::s_eSum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowująca sumę uchybów. </p>
+
+</div>
+</div>
 <a id="ad838dbe9b445644f60cba573f9726713" name="ad838dbe9b445644f60cba573f9726713"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad838dbe9b445644f60cba573f9726713">&#9670;&#160;</a></span>s_Kp</h2>
 
@@ -218,7 +391,7 @@ Atrybuty prywatne</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -242,12 +415,60 @@ Atrybuty prywatne</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Zmienna przechowująca stałą czasową całkowania. </p>
+
+</div>
+</div>
+<a id="a8f206f0a2c7f6a19f29432f04addf09c" name="a8f206f0a2c7f6a19f29432f04addf09c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f206f0a2c7f6a19f29432f04addf09c">&#9670;&#160;</a></span>s_Tp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PI::s_Tp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowująca czas próbkowania. </p>
+
+</div>
+</div>
+<a id="a96dc900c91f1d66c6a183e2cc433faf4" name="a96dc900c91f1d66c6a183e2cc433faf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96dc900c91f1d66c6a183e2cc433faf4">&#9670;&#160;</a></span>s_WartZad</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PI::s_WartZad</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna przechowująca wartość zadaną </p>
 
 </div>
 </div>

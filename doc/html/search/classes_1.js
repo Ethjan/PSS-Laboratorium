@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['pd_0',['PD',['../class_p_d.html',1,'']]],
-  ['pi_1',['PI',['../class_p_i.html',1,'']]],
-  ['pid_2',['PID',['../class_p_i_d.html',1,'']]]
+  ['dekorator_0',['Dekorator',['../class_dekorator.html',1,'']]],
+  ['dekoratorprost_1',['DekoratorProst',['../class_dekorator_prost.html',1,'']]],
+  ['dekoratorsin_2',['DekoratorSin',['../class_dekorator_sin.html',1,'']]],
+  ['dekoratorszum_3',['DekoratorSzum',['../class_dekorator_szum.html',1,'']]]
 ];

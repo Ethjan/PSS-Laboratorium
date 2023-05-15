@@ -1,10 +1,10 @@
-#include "DekoratorProst.h"
+Ôªø#include "DekoratorProst.h"
 #include <cmath>
 #define M_PI 3.14159265358979323846
 
 /**
- * Generowanie wartoúci konretnego sygna≥u o zadanych parametrach
- * @return wygenerowana wartoúÊ sygna≥u
+ * Generowanie warto≈õci konretnego sygna≈Çu o zadanych parametrach
+ * @return wygenerowana warto≈õƒá sygna≈Çu
  */
 double DekoratorProst::Generuj() {
 	double wartosc;
@@ -13,6 +13,5 @@ double DekoratorProst::Generuj() {
 		wartosc = s_amplituda;
 	else 
 		wartosc = -s_amplituda;
-	//Dekorator::sprawdzacz();
 	return wartosc + Dekorator::Generuj();
 }

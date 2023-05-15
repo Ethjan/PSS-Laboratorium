@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['siso_2eh_0',['SISO.h',['../_s_i_s_o_8h.html',1,'']]]
+  ['komponent_2eh_0',['Komponent.h',['../_komponent_8h.html',1,'']]],
+  ['konkretnykomponent_2ecpp_1',['KonkretnyKomponent.cpp',['../_konkretny_komponent_8cpp.html',1,'']]],
+  ['konkretnykomponent_2eh_2',['KonkretnyKomponent.h',['../_konkretny_komponent_8h.html',1,'']]]
 ];

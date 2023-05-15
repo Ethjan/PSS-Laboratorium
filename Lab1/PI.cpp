@@ -9,15 +9,13 @@ using json = nlohmann::json;
  * @param we wejście regulatora
  * @return obliczone wyjście regulatora
  */
-double PI::symuluj(double we) {
+double PI::symuluj(double uchyb) {
 	double sterowanie;
-	s_e = s_WartZad - we;
 	//obliczenie sterowania
-	//sterowanie = s_Kp * s_e + s_eSum / s_Ti;
-    sterowanie = obliczP() + obliczI();
+    sterowanie = obliczP(uchyb) + obliczI();
 	//antywindup oraz ograniczenie sterowania
 	if (sterowanie < 100 && sterowanie > 0)
-		s_eSum = s_eSum + s_e * s_Tp;
+		s_eSum = s_eSum + uchyb * s_Tp;
 	else if (sterowanie > 100)
 		sterowanie = 100;
 	else if (sterowanie < 0)
@@ -27,10 +25,11 @@ double PI::symuluj(double we) {
 }
 /**
  * Obliczenie członu proporcjonalnego regulatora.
+ * @param uchyb wartość uchybu
  * @return obliczony człon proporcjonalnego regulatora
  */
-double PI::obliczP() {
-    return s_Kp * s_e;
+double PI::obliczP(double uchyb) {
+    return s_Kp * uchyb;
 }
 /**
  * Obliczenie członu całkującego regulatora.
@@ -38,14 +37,6 @@ double PI::obliczP() {
  */
 double PI::obliczI() {
     return s_eSum / s_Ti;
-}
-
-/**
- * Zmiana wartości zadanej.
- * @param WartZad nowa wartość zadana.
- */
-void PI::zmianaWartZad(double WartZad){
-    s_WartZad = WartZad;
 }
 /**
  * Zapis konfiguracji do pliku (Wzmocnienie regulatora, Stała czasowa całkowania, Okres próbkowana, Wartość zadana).
