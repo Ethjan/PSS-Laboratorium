@@ -31,6 +31,7 @@ double PID::symuluj(double we) {
 void PID::zmianaWartZad(double WartZad) {
     PI::s_WartZad = WartZad;
 }
+
 /**
  * Zapis konfiguracji do pliku (Wzmocnienie regulatora, Stała czasowa całkowania, Stała czasowa różniczkowania, Okres próbkowana, Wartość zadana).
  * @param strumienOdczyt referencja do strumienia do odczytu.

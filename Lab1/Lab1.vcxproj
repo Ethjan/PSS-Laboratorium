@@ -130,6 +130,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ARX.cpp" />
+    <ClCompile Include="Dekorator.cpp" />
+    <ClCompile Include="DekoratorProst.cpp" />
+    <ClCompile Include="DekoratorSin.cpp" />
+    <ClCompile Include="DekoratorSzum.cpp" />
+    <ClCompile Include="KonkretnyKomponent.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PD.cpp" />
     <ClCompile Include="PI.cpp" />
@@ -137,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ARX.h" />
+    <ClInclude Include="Dekorator.h" />
+    <ClInclude Include="DekoratorProst.h" />
+    <ClInclude Include="DekoratorSin.h" />
+    <ClInclude Include="DekoratorSzum.h" />
+    <ClInclude Include="Komponent.h" />
+    <ClInclude Include="KonkretnyKomponent.h" />
     <ClInclude Include="PD.h" />
     <ClInclude Include="PI.h" />
     <ClInclude Include="PID.h" />

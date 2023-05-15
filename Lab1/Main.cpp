@@ -5,12 +5,18 @@
 #include "PI.h"
 #include "PD.h"
 #include "PID.h"
+#include "Komponent.h"
+#include "KonkretnyKomponent.h"
+#include "Dekorator.h"
+#include "DekoratorSin.h"
+#include "DekoratorProst.h"
+#include "DekoratorSzum.h"
 
 int main() {
-    ARX obiekt({ -0.8, 0.4 }, { 1 }, 1, 0.1);
-    PI regulator1(0.1, 10, 1, 3);
-    PD regulator2(0.2, 100, 1, 3);
-    PID regulator3(0.02, 20, 100, 1,10);
+    //ARX obiekt({ -0.8, 0.4 }, { 1 }, 1, 0.1);
+    //PI regulator1(0.1, 10, 1, 3);
+    //PD regulator2(0.2, 100, 1, 3);
+    //PID regulator3(0.02, 20, 100, 1,10);
 
     // Test zapisu konfiguracji
     /*
@@ -46,11 +52,11 @@ int main() {
     }
     */
     // Test sterowania
-    ///*
+    /*
+    regulator1.zmianaWartZad(5);
     std::ofstream outfile("output.txt");
     double wyjscie=0.0 ,sterowanie;
-    for (int i = 0; i < 100
-        ; i++) {
+    for (int i = 0; i < 100; i++) {
         sterowanie = regulator1.symuluj(wyjscie);
         wyjscie = obiekt.symuluj(sterowanie);
         std::cout << "Wyjscie: " << wyjscie << std::endl;
@@ -62,12 +68,38 @@ int main() {
         }
     }
     outfile.close();
-    //*/
+    */
     // Test odczytu konfiguracji
     /*
     std::fstream PlikOdczyt2("Konf.json", std::ios::in);
     obiekt.OdczytKonfiguracji(PlikOdczyt2);
     obiekt.WypiszParametry(std::cout);
     */
+
+    // Test Generatora
+    Komponent* simple = new KonkretnyKomponent;
+    Komponent* generator1 = new DekoratorSzum(simple,1);
+    Komponent* generator2 = new DekoratorSin(generator1,1,60,0);
+    Komponent* generator3 = new DekoratorProst(generator2,1,5);
+
+    std::ofstream outfile("Generator.txt");
+    double wartosc;
+
+    for (int i = 0; i < 100; i++) {
+        wartosc = generator3->Generuj();
+        std::cout << "Wyjscie: " << wartosc << std::endl;
+        if (outfile.is_open()) {
+            outfile << wartosc << std::endl;
+        }
+        else {
+            std::cout << "Nie udało się otworzyć pliku do zapisu." << std::endl;
+        }
+    }
+    outfile.close();
+
+    delete simple;
+    delete generator1;
+    delete generator2;
+    delete generator3;
     return 0;
 };

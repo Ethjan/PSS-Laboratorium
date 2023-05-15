@@ -22,9 +22,9 @@ private:
     std::deque<double> s_u;
     /// Zmienna przechowująca poprzednie wartości  wyjścia obiektu
     std::deque<double> s_y;
-    /// Zmienna przechowująca poprzednie wartości  wyjścia obiektu
+    /// Zmienna przechowująca silnik generatora
     std::default_random_engine s_generator;
-    /// Zmienna przechowująca poprzednie wartości  wyjścia obiektu
+    /// Zmienna przechowująca dystybucje
     std::normal_distribution<double> s_dystrybucja;
 public:   
     /**  Konstruktor
