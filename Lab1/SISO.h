@@ -1,12 +1,11 @@
 ﻿#pragma once
+#include "KompozytKomponent.h"
 
 /** @class SISO
- * Klasa modelujaca obiekt typu %SISO. Klasa czysto abstrakcyjna.
+ * Klasa modelujaca obiekt typu %SISO.
  */
-class SISO {
+class SISO : public KompozytKomponent {
 public:
-    ///Metoda symulujaca obiekt. Metoda czysto wirtualna.
-    virtual double symuluj(double we) = 0;
     ///Wirtualny destruktor.
     virtual ~SISO(){};
 };

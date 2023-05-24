@@ -1,10 +1,10 @@
 ﻿#pragma once
-#include "Komponent.h"
+#include "DekoratorKomponent.h"
 
 /** @class KonkretnyKomponent
  * Klasa %KonkretnyKomponent. Klasa umożliwiająca generację konkretnej wartości stałej zadanej przez użytkownika.
  */
-class KonkretnyKomponent : public Komponent
+class DekoratorKonkretnyKomponent : public DekoratorKomponent
 {
 private:
 	double s_wartStala;
@@ -12,7 +12,7 @@ public:
 	/**  Konstruktor
 	* @brief Jako argument przyjmuje wartość stałą. 
 	*/
-	KonkretnyKomponent(double wartStala) : s_wartStala(wartStala) {}
+	DekoratorKonkretnyKomponent(double wartStala) : s_wartStala(wartStala) {}
 	///Metoda implementująca generowanie wartości stałej zadanej przez użytkownika.
 	double Generuj() override;
 };

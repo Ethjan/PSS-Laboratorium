@@ -15,7 +15,7 @@ class DekoratorProst : public Dekorator
 		/** Konstruktor
 		* @brief Jako argument przyjmuje wskaźnik do klasy oraz amplitudę i szerokość sygnału prostokątnego.
 		*/
-		DekoratorProst(Komponent* komponent, double amplituda, double wypelnienie) : Dekorator(komponent) , s_amplituda(amplituda), s_wypelnienie(wypelnienie){}
+		DekoratorProst(DekoratorKomponent* komponent, double amplituda, double wypelnienie) : Dekorator(komponent) , s_amplituda(amplituda), s_wypelnienie(wypelnienie){}
 		///Metoda implementująca generowanie wartości.
 		double Generuj() override;
 };

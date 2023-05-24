@@ -5,14 +5,21 @@
 #include "PI.h"
 #include "PD.h"
 #include "PID.h"
-#include "Komponent.h"
-#include "KonkretnyKomponent.h"
+#include "DekoratorKomponent.h"
+#include "DekoratorKonkretnyKomponent.h"
 #include "Dekorator.h"
 #include "DekoratorSin.h"
 #include "DekoratorProst.h"
 #include "DekoratorSzum.h"
+#include "KompozytKomponent.h"
+#include "Kompozyt.h"
+#include "KompozytSzeregowo.h"
+#include "KompozytRownolegle.h"
 
 int main() {
+    double wyjscie;
+    //double wartosc;
+
     //ARX obiekt({ -0.8, 0.4 }, { 1 }, 1, 0.1);
     //PI regulator1(0.1, 10, 1, 3);
     //PD regulator2(0.2, 100, 1, 3);
@@ -40,7 +47,7 @@ int main() {
 
     // Test obiektu
     /*
-    double wyjscie;
+   
     for (int i = 0; i < 25; i++) {
         if (i == 0) {
             wyjscie = obiekt.symuluj(0.0);
@@ -75,15 +82,15 @@ int main() {
     obiekt.WypiszParametry(std::cout);
     */
 
-    ///*
+    /*
     // Test Generatora
-    Komponent* generatorKonkretny = new KonkretnyKomponent(2.0);
-    Komponent* generatorSzum = new DekoratorSzum(generatorKonkretny,0.1);
-    Komponent* generatorSzumSin = new DekoratorSin(generatorSzum,1,60,0);
-    Komponent* generatorSzumSinProst = new DekoratorProst(generatorSzumSin,1,20);
+    DekoratorKomponent* generatorKonkretny = new DekoratorKonkretnyKomponent(2.0);
+    DekoratorKomponent* generatorSzum = new DekoratorSzum(generatorKonkretny,0.1);
+    DekoratorKomponent* generatorSzumSin = new DekoratorSin(generatorSzum,1,60,0);
+    DekoratorKomponent* generatorSzumSinProst = new DekoratorProst(generatorSzumSin,1,20);
 
     std::ofstream outfile("Generator.txt");
-    double wartosc;
+    
 
     for (int i = 0; i < 100; i++) {
         wartosc = generatorSzumSinProst->Generuj();
@@ -101,6 +108,65 @@ int main() {
     delete generatorSzum;
     delete generatorSzumSin;
     delete generatorSzumSinProst;
+    */
+
+    ///*
+    // Test Kompozytu
+    KompozytKomponent* grupa1 = new KompozytSzeregowo;
+
+    KompozytKomponent* obiekt11 = new ARX({ -0.8, 0.4 }, { 1 }, 1, 0.0);
+    KompozytKomponent* obiekt12 = new ARX({ -0.8, 0.4 }, { 1 }, 1, 0.0);
+
+    grupa1->Dodaj(obiekt11);
+    grupa1->Dodaj(obiekt12);
+
+    KompozytKomponent* grupa2 = new KompozytRownolegle;
+
+    KompozytKomponent* obiekt21 = new ARX({ -0.8, 0.4 }, { 1 }, 1, 0.0);
+    KompozytKomponent* obiekt22 = new ARX({ -0.8, 0.4 }, { 1 }, 1, 0.0);
+
+    grupa2->Dodaj(obiekt21);
+    grupa2->Dodaj(obiekt22);
+
+    KompozytKomponent* grupa3 = new KompozytRownolegle;
+
+    grupa3->Dodaj(grupa1);
+    grupa3->Dodaj(grupa2);
+
+    KompozytKomponent* obiekt32 = new ARX({ -0.8, 0.4 }, { 1 }, 1, 0.0);
+    KompozytKomponent* struktura = new KompozytSzeregowo;
+
+    struktura->Dodaj(obiekt32);
+    struktura->Dodaj(grupa3);
+
+    std::ofstream outfile("Struktura.txt");
+    for (int i = 0; i < 100; i++) {
+        
+        if (i == 0) {
+            wyjscie = struktura->symuluj(0.0);
+        }
+        else {
+            wyjscie = struktura->symuluj(1.0);
+        }
+        std::cout << "Wyjscie: " << wyjscie << std::endl;
+        if (outfile.is_open()) {
+            outfile << wyjscie << std::endl;
+        }
+        else {
+            std::cout << "Nie udało się otworzyć pliku do zapisu." << std::endl;
+        }
+    }
+    outfile.close();
+
+    delete obiekt11;
+    delete obiekt12;
+    delete grupa1;
+    delete obiekt21;
+    delete obiekt22;
+    delete grupa2;
+    delete obiekt32;
+    delete grupa3;
+    delete struktura;
     //*/
 
     return 0;

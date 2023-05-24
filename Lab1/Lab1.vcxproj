@@ -134,7 +134,11 @@
     <ClCompile Include="DekoratorProst.cpp" />
     <ClCompile Include="DekoratorSin.cpp" />
     <ClCompile Include="DekoratorSzum.cpp" />
-    <ClCompile Include="KonkretnyKomponent.cpp" />
+    <ClCompile Include="DekoratorKonkretnyKomponent.cpp" />
+    <ClCompile Include="Kompozyt.cpp" />
+    <ClCompile Include="KompozytKomponent.cpp" />
+    <ClCompile Include="KompozytRownolegle.cpp" />
+    <ClCompile Include="KompozytSzeregowo.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PD.cpp" />
     <ClCompile Include="PI.cpp" />
@@ -146,8 +150,12 @@
     <ClInclude Include="DekoratorProst.h" />
     <ClInclude Include="DekoratorSin.h" />
     <ClInclude Include="DekoratorSzum.h" />
-    <ClInclude Include="Komponent.h" />
-    <ClInclude Include="KonkretnyKomponent.h" />
+    <ClInclude Include="DekoratorKomponent.h" />
+    <ClInclude Include="DekoratorKonkretnyKomponent.h" />
+    <ClInclude Include="Kompozyt.h" />
+    <ClInclude Include="KompozytKomponent.h" />
+    <ClInclude Include="KompozytRownolegle.h" />
+    <ClInclude Include="KompozytSzeregowo.h" />
     <ClInclude Include="PD.h" />
     <ClInclude Include="PI.h" />
     <ClInclude Include="PID.h" />

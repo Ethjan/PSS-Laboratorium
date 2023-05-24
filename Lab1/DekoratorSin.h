@@ -17,7 +17,7 @@ class DekoratorSin : public Dekorator
 		/** Konstruktor
 		* @brief Jako argument przyjmuje wskaźnik do klasy oraz amplitudę, częstotliwość i przesunięcie fazowe sinusoidy.
 		*/
-		DekoratorSin(Komponent* komponent,double amplituda, double czestotliwosc, double przesuniecieFazowe) : Dekorator(komponent), s_amplituda(amplituda),s_czestotliwosc(czestotliwosc),s_przesuniecieFazowe(przesuniecieFazowe) {}
+		DekoratorSin(DekoratorKomponent* komponent,double amplituda, double czestotliwosc, double przesuniecieFazowe) : Dekorator(komponent), s_amplituda(amplituda),s_czestotliwosc(czestotliwosc),s_przesuniecieFazowe(przesuniecieFazowe) {}
 		///Metoda implementująca generowanie wartości.
 		double Generuj() override;
 };

@@ -19,7 +19,7 @@ private:
 		/**  Konstruktor
 		* @brief Jako argument przyjmuje wskaźnik do klasy oraz ochylenie standardowe szumu.
 		*/
-		DekoratorSzum(Komponent* komponent,double odchylenieStand) : Dekorator(komponent), s_odchylenieStand(odchylenieStand), s_generator(std::random_device{}()), s_dystrybucja(0.0, odchylenieStand) {}
+		DekoratorSzum(DekoratorKomponent* komponent,double odchylenieStand) : Dekorator(komponent), s_odchylenieStand(odchylenieStand), s_generator(std::random_device{}()), s_dystrybucja(0.0, odchylenieStand) {}
 		///Metoda implementująca generowanie wartości.
 		double Generuj() override;
 };
